@@ -4,7 +4,7 @@ public class test1 {
 
 	public static void main(String[] args) {
 		
-		String name = "³ªÀÇ ºê·±Ä¡´Ù";
+		String name = "ì´ìŠ¹í™˜";
 
 
 	}
