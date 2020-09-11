@@ -7,6 +7,7 @@ public class test1 {
 		String name = "이승환";
 
 
+		
 	}
-
+	
 }
