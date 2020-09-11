@@ -3,13 +3,12 @@ package DAO;
 public class test1 {
 
 	public static void main(String[] args) {
-		String name = "ÀÌ½ÂÈ¯";
-		String name1 = "¹Ú¿ìÇö";
+		String name = "ì´ìŠ¹í™˜";
 
 	}
 	public void woo() {
-		String a = "¹Ú¿ìÇö";		
-		// ¸¶½ºÅÍ·Î ¿Ã·ÁÁö³ª?
+		String a = "ë°•ìš°í˜„";		
+		// ë§ˆìŠ¤í„°ì— ì˜¬ë ¤ì§€ë‚˜
 	}
 
 }
