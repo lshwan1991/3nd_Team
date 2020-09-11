@@ -9,6 +9,7 @@ public class test1 {
 	}
 	public void woo() {
 		String a = "박우현";		
+		// 마스터로 올려지나?
 	}
 
 }
