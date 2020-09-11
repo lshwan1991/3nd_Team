@@ -7,5 +7,8 @@ public class test1 {
 		String name1 = "박우현";
 
 	}
+	public void woo() {
+		String a = "박우현";		
+	}
 
 }
