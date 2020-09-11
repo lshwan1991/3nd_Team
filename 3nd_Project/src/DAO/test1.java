@@ -3,10 +3,15 @@ package DAO;
 public class test1 {
 
 	public static void main(String[] args) {
-		// 나건수님이 수정한 코드
-		// String reqUri = request.getRequeURI(); 
-		String name = "나건수";
+		String name = "팀 프로젝트";
 
+		String name1 = "이승환";
+		
+	}
+
+	public void woo() {
+		String a = "박우현";		
+		// 마스터에 올려지나
 	}
 
 }
