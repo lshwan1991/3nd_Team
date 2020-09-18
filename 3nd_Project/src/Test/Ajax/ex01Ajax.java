@@ -15,6 +15,8 @@ import DAO.titleVO;
 @WebServlet("/ex01Ajax")
 public class ex01Ajax extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		//request.setCharacterEncoding("euc-kr");
 		String title = request.getParameter("title");
 		
 		System.out.println(title);
