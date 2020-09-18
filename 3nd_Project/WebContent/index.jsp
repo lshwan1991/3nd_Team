@@ -46,6 +46,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 <body class="is-preload">
 		
@@ -95,7 +97,7 @@
 												</div>
 											</div>
 											
-											<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=423cd019a50dfcc92ba9643b89dbfcd2"></script>
+											<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=423cd019a50dfcc92ba9643b89dbfcd2&libraries=services"></script>
 											<script>
 											// 마커를 담을 배열입니다
 											var markers = [];
@@ -186,21 +188,21 @@
 													// 해당 장소에 인포윈도우에 장소명을 표시합니다
 													// mouseout 했을 때는 인포윈도우를 닫습니다
 													(function(marker, title) {
-														kakao.maps.event.addListener(marker, 'mouseover', function() {
+														kakao.maps.event.addListener(marker, 'click', function() {
 															displayInfowindow(marker, title);
 														});
 											
-														kakao.maps.event.addListener(marker, 'mouseout', function() {
+														/* kakao.maps.event.addListener(marker, 'mouseout', function() {
 															infowindow.close();
-														});
+														}); */
 											
-														itemEl.onmouseover =  function () {
+														itemEl.onclick =  function () {
 															displayInfowindow(marker, title);
 														};
 											
-														itemEl.onmouseout =  function () {
+														/* itemEl.onmouseout =  function () {
 															infowindow.close();
-														};
+														}; */ 
 													})(marker, places[i].place_name);
 											
 													fragment.appendChild(itemEl);
@@ -305,6 +307,24 @@
 											
 												infowindow.setContent(content);
 												infowindow.open(map, marker);
+												
+												$.ajax({
+													type : "get", // 요청방식
+													url : "ex01Ajax?title="+title,// 요청할 서버페이지
+													dataType : "text", // 응답받을 방식
+													success : function(data) {
+														$('#co').html(data);
+														// 서버페이지와 통신에 성공한 후에 행동
+														 // alert(data);
+														
+													},
+													error : function() {
+														// 서버페이지와 통신에 실패한 후에 행동
+	
+													}
+													
+												})
+												
 											}
 											
 											 // 검색결과 목록의 자식 Element를 제거하는 함수입니다
@@ -325,7 +345,7 @@
 									<header class="major">
 										<h2>세부내용 확인</h2>
 									</header>
-									<div class="features">
+									<div id="co" class="features" style="margin: 0 0 2em 0em;">
 										<!-- <article>
 											<span class="icon fa-gem"></span>
 											<div class="content">
