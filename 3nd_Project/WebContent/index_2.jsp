@@ -962,16 +962,13 @@
 															
 															$('#co').html(data);
 															
-															if(data.score == '1'){
-															
-																$('#img1').attr("src=img");
-															}
+														},
 															
 															
 															// 서버페이지와 통신에 성공한 후에 행동
 															 //alert(data);
 															
-														},
+														
 														error : function() {
 															// 서버페이지와 통신에 실패한 후에 행동
 		
@@ -1169,14 +1166,7 @@
 									</header>
 									<div class="mini-posts">
 										<article>
-											<%
-												Crawling craw = new Crawling();
-												List<WebElement> list = craw.Crawling_Co();
-												
-												for(int i=0; i<list.size(); i++) {
-													System.out.println(list.get(i).getText());
-												}
-											%>
+											
 											<a href="https://www.gwangju.go.kr/c19/"  class="image"><img src="images/time.PNG" alt="" /></a>
 											<p style="font-family: Cafe24Ohsquareair;">광주광역시 실시간 코로나 상황페이지 입니다.</p>
 										</article>
