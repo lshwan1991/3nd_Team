@@ -1,3 +1,6 @@
+<%@page import="org.openqa.selenium.WebElement"%>
+<%@page import="java.util.List"%>
+<%@page import="Test.Ajax.Crawling"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
@@ -830,21 +833,21 @@
 														// 해당 장소에 인포윈도우에 장소명을 표시합니다
 														// mouseout 했을 때는 인포윈도우를 닫습니다
 														(function (marker, title) {
-															kakao.maps.event.addListener(marker, 'mouseover', function () {
+															kakao.maps.event.addListener(marker, 'click', function () {
 																displayInfowindow(marker, title);
 															});
 										
-															kakao.maps.event.addListener(marker, 'mouseout', function () {
+															/* kakao.maps.event.addListener(marker, 'mouseout', function () {
 																infowindow.close();
-															});
+															}); */
 										
-															itemEl.onmouseover = function () {
+															itemEl.onclick = function () {
 																displayInfowindow(marker, title);
 															};
 										
-															itemEl.onmouseout = function () {
+															/* itemEl.onmouseout = function () {
 																infowindow.close();
-															};
+															}; */
 														})(marker, places[i].place_name);
 										
 														fragment.appendChild(itemEl);
@@ -956,7 +959,15 @@
 														url : "ex01Ajax?title="+title,// 요청할 서버페이지
 														dataType : "text", // 응답받을 방식
 														success : function(data) {
+															
 															$('#co').html(data);
+															
+															if(data.score == '1'){
+															
+																$('#img1').attr("src=img");
+															}
+															
+															
 															// 서버페이지와 통신에 성공한 후에 행동
 															 //alert(data);
 															
@@ -1074,7 +1085,7 @@
 													 <line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
 													 <line class="right" x1="300" y1="0" x2="300" y2="1380"/>
 												  </svg>
-												  <img src="images/mask1.png" width="200px" height="200px" style="padding: 10px;">
+												  <img id="img1" src="images/mask1.png" width="200px" height="200px" style="padding: 10px;">
 												  <span id="co">받아올 값</span>
 											   </div>
 											   <div class="box">
@@ -1158,6 +1169,14 @@
 									</header>
 									<div class="mini-posts">
 										<article>
+											<%
+												Crawling craw = new Crawling();
+												List<WebElement> list = craw.Crawling_Co();
+												
+												for(int i=0; i<list.size(); i++) {
+													System.out.println(list.get(i).getText());
+												}
+											%>
 											<a href="https://www.gwangju.go.kr/c19/"  class="image"><img src="images/time.PNG" alt="" /></a>
 											<p style="font-family: Cafe24Ohsquareair;">광주광역시 실시간 코로나 상황페이지 입니다.</p>
 										</article>
