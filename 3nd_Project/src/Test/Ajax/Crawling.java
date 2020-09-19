@@ -1,14 +1,15 @@
+package Test.Ajax;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Crawl2 {
-
-	public static void main(String[] args) {
+public class Crawling {
+	public List<WebElement> Crawling_Co() {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\SMHRD\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
@@ -25,10 +26,7 @@ public class Crawl2 {
 		for(int i=0; i<objSpanList.size(); i++) {
 			System.out.println(objSpanList.get(i).getText());
 		}
-		//for (WebElement e : objSpanList) {
-	           //System.out.println(":"+e.getText());
-	       //}
 		
+		return objSpanList;
 	}
-
 }
