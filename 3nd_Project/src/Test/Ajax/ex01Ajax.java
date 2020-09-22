@@ -9,6 +9,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.JSONObject;
+import org.json.JSONTokener;
+
+
+import com.google.gson.Gson;
+
 import DAO.titleDAO;
 import DAO.titleVO;
 
@@ -26,13 +32,18 @@ public class ex01Ajax extends HttpServlet {
 		titleVO vo = dao.oneselect(title);
 		System.out.println(vo.getTitle());
 		
+		//JSON
+		JSONObject object = new JSONObject(vo);
+		System.out.println(object);
 		
+
 		response.setContentType("text/html;charset=euc-kr");
 		PrintWriter out = response.getWriter();
-		out.println("DB에서 검색한 정보");
-		out.println(vo.getScore());
-		out.println(vo.getTel());
-		out.println(vo.getAddress());
+		//out.println("DB에서 검색한 정보");
+		//out.println(vo.getScore());
+		//out.println(vo.getTel());
+		//out.println(vo.getAddress());
+		out.println(object);
 	}
 
 }

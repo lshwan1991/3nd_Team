@@ -518,7 +518,10 @@
 								<section id="banner">
 									<div class="content">
 										<header class="major">
-											<h3><span>post_corona MAP</span><p style="color: #000; font-family: THE스피드;"> 장소를 선택하세요.<br> 장소를 선택하고 아래 안전점수를 확인하세요.</p></h3>
+											<h3>
+											<span>post_corona MAP</span>
+											<p style="color: #000; font-family: THE스피드;"> 장소를 선택하세요.<br> 장소를 선택하고 아래 안전점수를 확인하세요.</p>
+											</h3>
 											<p style="margin-top:-12px">
 
 											</p>
@@ -558,7 +561,8 @@
 											</div>
 										
 											<script type="text/javascript"
-												src="//dapi.kakao.com/v2/maps/sdk.js?appkey=423cd019a50dfcc92ba9643b89dbfcd2&libraries=services"></script>
+												src="//dapi.kakao.com/v2/maps/sdk.js?appkey=423cd019a50dfcc92ba9643b89dbfcd2&libraries=services">
+											</script>
 											<script>
 												// 마커를 클릭했을 때 해당 장소의 상세정보를 보여줄 커스텀오버레이입니다
 												var placeOverlay1 = new kakao.maps.CustomOverlay({ zIndex: 1 }),
@@ -957,14 +961,23 @@
 													$.ajax({
 														type : "get", // 요청방식
 														url : "ex01Ajax?title="+title,// 요청할 서버페이지
-														dataType : "text", // 응답받을 방식
+														dataType : "json", // 응답받을 방식
 														success : function(data) {
+															var title = data.title;
+															var ex = data.address+data.tel+data.score;
 															
-															$('#co').html(data);
+															$('#co').html(title);
+															$('#co1').html(ex);
 															
-															if(data.score == '1'){
+															var score = data.score;
 															
-																$('#img1').attr("src=img");
+															$('#co').text(title);
+															$('#co1').text(ex);
+															
+															if(score == 5.0){
+																$('#img1').attr("src","images/mask2.png");
+															}else{
+																$('#img1').attr("src","images/mask1.png");
 															}
 															
 															
@@ -1051,7 +1064,7 @@
 											
 				</div>						
 											<!-----------------------------------------------map 끝 ----------------------------->
-											</script>
+											
 											
 									</div>
 									
@@ -1079,7 +1092,7 @@
 										<section class="demo-3">
 											<div class="grid">
 											   <div class="box">
-												  <svg xmlns="http://www.w3.org/2000/svg" width=100%" height="100%">
+												  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
 													 <line class="top" x1="0" y1="0" x2="900" y2="0"/>
 													 <line class="left" x1="0" y1="460" x2="0" y2="-920"/>
 													 <line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
@@ -1087,6 +1100,7 @@
 												  </svg>
 												  <img id="img1" src="images/mask1.png" width="200px" height="200px" style="padding: 10px;">
 												  <span id="co">받아올 값</span>
+												  <span id="co1">받아올 값</span>
 											   </div>
 											   <div class="box">
 												  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
@@ -1168,18 +1182,27 @@
 										<strong style="font-family: THE스피드; font-size: 30px;">실시간 코로나 상황</strong><br><br>
 									</header>
 									<div class="mini-posts">
+									
 										<article>
-											<%
+											<%-- <%
 												Crawling craw = new Crawling();
 												List<WebElement> list = craw.Crawling_Co();
 												
 												for(int i=0; i<list.size(); i++) {
 													System.out.println(list.get(i).getText());
 												}
-											%>
+											%> --%>
+
+
+							
+							
+                                 
+                                 
+                                 
+                              		 
 											<a href="https://www.gwangju.go.kr/c19/"  class="image"><img src="images/time.PNG" alt="" /></a>
 											<p style="font-family: Cafe24Ohsquareair;">광주광역시 실시간 코로나 상황페이지 입니다.</p>
-										</article>
+										</article></div>
 
 										
 										<article>
