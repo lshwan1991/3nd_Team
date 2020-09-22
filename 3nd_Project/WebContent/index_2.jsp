@@ -1,5 +1,4 @@
 <%@page import="org.openqa.selenium.WebElement"%>
-<%@page import="java.util.List"%>
 <%@page import="Test.Ajax.Crawling"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -14,6 +13,24 @@
 		<title>Editorial by HTML5 UP</title>
 		<style>
 		
+		@font-face { font-family: 'GmarketSansMedium'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff'); font-weight: normal; font-style: normal; }
+		@font-face {
+	    font-family: 'GmarketSansLight';
+	    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+            
+		    @font-face {
+		    font-family: 'GmarketSansBold';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+            
+			
+			
+			
 			#menu_wrap {position:absolute;top:0;left:0;bottom:0;width:250px;margin:10px 0 30px 10px;padding:5px;overflow-y:auto;background:rgba(255, 255, 255, 0.8);z-index: 1;font-size:12px;border-radius: 10px;}
 			.bg_white {background:#fff;}
 			#menu_wrap hr {display: block; height: 1px;border: 0; border-top: 2px solid #5F5F5F;margin:3px 0;}
@@ -47,6 +64,45 @@
 			#pagination {margin:10px auto;text-align: center;}
 			#pagination a {display:inline-block;margin-right:10px;}
 			#pagination .on {font-weight: bold; cursor: default;color:#777;}
+			
+			
+			
+			/* 메인 이미지 */
+	   		.zoom {
+			   overflow: hidden;
+			  /*  padding: 10px; */
+			   background-color: #fff;
+			   border: 1px solid #e5e5e5;
+			   box-shadow: 0px 0px 20px 0px #e5e5e5;
+			   box-sizing: border-box;
+			   border-radius: 20px;
+			   transition: transform .5s;
+			   width: 300px;
+			   height: 300px;
+			   margin: 2%;
+			   display: inline-block; /* 가로로 배치 */
+			   opacity: 0.7; 
+			   filter: alpha(opacity=50);
+
+
+			
+			}
+			
+			.zoom:hover {
+			   -ms-transform: scale(1.1);
+			   -webkit-transform: scale(1.1);
+			   transform: scale(1.1);
+			   opacity: 1.0;
+			   filter: alpha(opacity=100);
+			}
+			
+			.zoom img {
+			   width: 300px;
+			   height: 300px
+			   
+			}
+			
+			
 
 			/* map */
 
@@ -54,7 +110,7 @@
         .map_wrap * {
             margin: 0;
             padding: 0;
-            font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;
+            font-family: 'Malgun Gothic', dotum, 'GmarketSansLight', sans-serif;
             font-size: 12px;
         }
 
@@ -219,7 +275,7 @@
         .map_wrap * {
             margin: 0;
             padding: 0;
-            font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;
+            font-family: 'Malgun Gothic', dotum, 'GmarketSansLight', sans-serif;
             font-size: 12px;
         }
 
@@ -448,29 +504,22 @@
 					<div id="main">
 						<div class="inner">
 							<div style="display: block;">
-								<img src="images/clean.PNG" width="200px" height="80px">
-								<!-- <h1 style="font-family: NEXONLv1GothicBold; font-size: 30px; color: #424242;">&nbsp POST CORONA</h1> -->
+								<img src="images/care.PNG" width="200px" height="80px"><br>
 							</div>
 							<!-- Header -->
+							<div><!--  style="background-color: #000" -->
 							<header id="header">
-								<div style="background-color: #fff; width: 700px; height: 600px;">
+							 
+							<div> <!-- style="background-color: #fff; width: 700px; height: 600px;" -->
+							
 								
+							
 									
-								
-									<div class="slide">
-										<ul class="slide_ul">
-										<li><img src="images/main_1.jpg" width="1000px" height="400px" alt="dane"></li>
-										<li><img src="images/main_2.jpg" width="1000px" height="400px" alt="dane"></li>
-										<li><img src="images/main_3.jpg" width="1000px" height="400px" alt="dane"></li>
-										<li><img src="images/main_4.jpg" width="1000px" height="400px" alt="dane"></li>
-										<li><img src="images/main_1.jpg" width="1000px" height="400px" alt="dane"></li>
-										</ul>
-									</div>
-									<section>
+									<section> <!-- color: #9E9E9E; -->
 										<header class="major">
-											<!-- <h4 style="font-family: GmarketSansBold;">매장 CCTV를 분석 안전한 매장을 추천해주는 서비스</h4> -->
-											<h1 style="font-family: THE스피드; color: #03A9F4; padding: 10px;" class="mb-5 text-primary font-weight-bold"  data-aos="fade-up" style="width: 100px;">POST CORONA에서<br> <span style="font-family: THE스피드; color:#3D5AFE ;" class="typed-words">편리하게 보여드립니다.</span></h1><br>
-											<script src="js/typed.js"></script>
+											<!-- <h4 style="font-family: THE스피드;">매장 CCTV를 분석 안전한 매장을 추천해주는 서비스</h4> -->
+											<h1 style="font-family: 나눔고딕; color:#263238; padding: 10px; margin-bottom:50px; margin-top: 50px" class="mb-5 text-primary font-weight-bold"  data-aos="fade-up" style="width: 100px;">Care - Zone 에서<br> <span style="font-family: 나눔고딕; color:#263238 ;" class="typed-words">편리하게 보여드립니다.</span></h1>
+											<script src="js/typed.js"></script> 
 											<script>
 											var typed = new Typed('.typed-words', {
 											strings: ["코로나부터 안전한 매장 확인","확진자 이동경로 확인"," 매장의 방역 유무 확인", " 함께 이길수 있습니다!"],
@@ -485,14 +534,28 @@
 								
 								
 									<script src="js/jquery.imgslider.js"></script>
-										</header>
+									   </header>
 									
 								</div>
 								
 								</header>
 							<!-- 여기까지 -->
-							
-
+							<div text-align:center;">
+									
+										<div id="main_img">
+										   <!-- <div class="zoom"><img alt="" src="images/coco1.png"></div>
+											<div class="zoom"><img alt="" src="images/coco2.png"></div>
+											<div class="zoom"><img alt="" src="images/coco3.png"></div> --> 
+											
+										   <div class="zoom"><img alt="" src="images/main_img1.jpg"></div>
+										   <div class="zoom"><img alt="" src="images/main_img2.jpg"></div>
+										   <div class="zoom"><img alt="" src="images/main_img3.jpg"></div>
+											
+										
+										</div>
+									
+								</div>
+							</div>
 							<!-- Section -->
 
 							
@@ -508,7 +571,6 @@
 									
 								</div> -->
 							</section>
-
 				
 
 
@@ -518,6 +580,7 @@
 								<section id="banner">
 									<div class="content">
 										<header class="major">
+<<<<<<< HEAD
 											<h3>
 											<span>post_corona MAP</span>
 											<p style="color: #000; font-family: THE스피드;"> 장소를 선택하세요.<br> 장소를 선택하고 아래 안전점수를 확인하세요.</p>
@@ -525,8 +588,39 @@
 											<p style="margin-top:-12px">
 
 											</p>
+=======
+										
+										<div style="background-color: #8EA3CA; width: 1000px;">
+										<header>
+											<h5  style="padding: 0px 10px 1px;
+											margin: 10px 0px 5px;
+											border-left-width: 5px;
+											border-left-style: solid;
+											border-left-color: slateblue;
+											font-size: 24pt; color: #fff;
+											font-family: '나눔고딕';
+											border-bottom-width: 1px;
+											letter-spacing: -0.07em;
+											text-align: left;
+											background-color: slateblue(250,250,250);">Map Page</h5>
+										</header>
+									</div>
+									
+										<!-- <div  style="background-color: #8EA3CA; width: 1000px">
+											<img alt="no" src="images/map_1.png" style="width: 40px">
+											<h4 style="font-size: 20pt"><strong>MAP </strong>Page</h4>
+										</div>
+										 -->
+												<h3>장소를 선택하세요.</h3>
+												<h3>장소를 선택하고 아래 안전점수를 확인하세요.</h3>
+												<p style="margin-top:-12px"></p>
+												
+										
+										
+											
+>>>>>>> branch 'ran' of https://github.com/lshwan1991/3nd_Team.git
 											<div class="map_wrap">
-												<div id="map" style="width:1000px;height:500px;position:relative;overflow:hidden;"></div>
+												<div id="map" style="width:1000px;height:500px;position:relative;overflow:hidden; box-shadow: 20px 20px 20px grey;"></div>
 												<ul id="category" style="left:800px;">
 										
 													<li id="CE7" data-order="4">
@@ -959,6 +1053,7 @@
 													
 													
 													$.ajax({
+<<<<<<< HEAD
 														type : "get", // 요청방식
 														url : "ex01Ajax?title="+title,// 요청할 서버페이지
 														dataType : "json", // 응답받을 방식
@@ -991,6 +1086,40 @@
 														}
 														
 													})
+=======
+				                                          type : "get", // 요청방식
+				                                          url : "ex01Ajax?title="+title,// 요청할 서버페이지
+				                                          dataType : "json", // 응답받을 방식
+				                                          success : function(data) {
+				                                             var title = data.title;
+				                                             var ex = data.address+data.tel+data.score;
+				                                             
+				                                             $('#co').html(title);
+				                                             $('#co1').html(ex);
+				                                             
+				                                             var score = data.score;
+				                                             
+				                                             $('#co').text(title);
+				                                             $('#co1').text(ex);
+				                                             
+				                                             if(score == 5.0){
+				                                                $('#img1').attr("src","images/mask_2.png");
+				                                             }else{
+				                                                $('#img1').attr("src","images/mask_1.png");
+				                                             }
+				                                             
+				                                             
+				                                             // 서버페이지와 통신에 성공한 후에 행동
+				                                              //alert(data);
+				                                             
+				                                          },
+				                                          error : function() {
+				                                             // 서버페이지와 통신에 실패한 후에 행동
+				      
+				                                          }
+				                                          
+				                                       })
+>>>>>>> branch 'ran' of https://github.com/lshwan1991/3nd_Team.git
 													
 													
 												}
@@ -1072,64 +1201,73 @@
 									
 								</section>
 								<div>
-									<header>
-										<h5  style="padding: 0px 10px 1px;
-										margin: 10px 0px 5px;
-										border-left-width: 5px;
-										border-left-style: solid;
-										border-left-color: slateblue;
-										font-size: 24pt; color: #000;
-										font-family: 'THE스피드';
-										border-bottom-width: 1px;
-										letter-spacing: -0.07em;
-										line-height: 35px;
-										background-color: slateblue(250,250,250);">안전점수</h5>
-									</header>
-									
+									<div style="background-color: #8EA3CA; width: 1000px; height: 50px">
+										<header>
+											<h5  style="padding: 0px 10px 1px;
+											margin: 10px 0px 5px;
+											border-left-width: 5px;
+											border-left-style: solid;
+											border-left-color: slateblue;
+											font-size: 24pt; color: #fff;
+											font-family: '나눔고딕';
+											border-bottom-width: 1px;
+											letter-spacing: -0.07em;
+											background-color: slateblue(250,250,250);">안전점수</h5>
+										</header>
+									</div>
 										<!-- 마스크 착용 비율 값으로 이미지가 상황에 맞게 설정해야함 1 : 좋음 2 : 중간 3 : 나쁨-->
 										<!-- <img src="images/마스크1.png" width="130px" height="130px" alt="" /><br>
 										<h3 style="color: #000; font-family: THE스피드;">마스크 점수</h3> -->
-										<section class="demo-3">
+										<section class="demo-3" style="font-family: 나눔고딕;">
 											<div class="grid">
+<<<<<<< HEAD
 											   <div class="box">
 												  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+=======
+											   <div class="box" style="color: #000000; font-size: 30px">	
+												  <svg xmlns="http://www.w3.org/2000/svg" width=100%" height="100%">
+>>>>>>> branch 'ran' of https://github.com/lshwan1991/3nd_Team.git
 													 <line class="top" x1="0" y1="0" x2="900" y2="0"/>
 													 <line class="left" x1="0" y1="460" x2="0" y2="-920"/>
 													 <line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
 													 <line class="right" x1="300" y1="0" x2="300" y2="1380"/>
 												  </svg>
+<<<<<<< HEAD
 												  <img id="img1" src="images/mask1.png" width="200px" height="200px" style="padding: 10px;">
 												  <span id="co">받아올 값</span>
 												  <span id="co1">받아올 값</span>
+=======
+												  <img id="img1" src="images/loading.png" width="200px" height="200px" style="padding: 10px;"><a style="font-size: 25px; color: #000">마스크 점수</a>
+												  <div align="left">
+												   	 <span id="co" style="font-size: 15px">받아올 값 : </span>
+												  	 <span id="co1" style="font-size: 15px">받아올 값 : </span>
+												  	 <span style="font-size: 15px">받아올 값 : </span>
+												   </div>
+>>>>>>> branch 'ran' of https://github.com/lshwan1991/3nd_Team.git
 											   </div>
-											   <div class="box">
+											   <div class="box" style="color: #000000; font-size: 30px">
 												  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
 													 <line class="top" x1="0" y1="0" x2="900" y2="0"/>
 													 <line class="left" x1="0" y1="460" x2="0" y2="-920"/>
 													 <line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
 													 <line class="right" x1="300" y1="0" x2="300" y2="1380"/>
 												  </svg>
-												  <img src="images/mask2.png" width="200px" height="200px" style="padding: 10px;">
-												  <span>받아올 값</span>
+												  <img src="images/loading.png" width="200px" height="200px" style="padding: 10px;"><a style="font-size: 25px; color: #000">방역 유무</a>
+												  <div align="left">
+												   <span style="font-size: 15px">받아올 값 : </span>
+												   <span style="font-size: 15px">받아올 값 : </span>
+												   <span style="font-size: 15px">받아올 값 : </span>
+											  	 </div>
 											   </div>
-											   <div class="box">
-												  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-													 <line class="top" x1="0" y1="0" x2="900" y2="0"/>
-													 <line class="left" x1="0" y1="460" x2="0" y2="-920"/>
-													 <line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
-													 <line class="right" x1="300" y1="0" x2="300" y2="1380"/>
-												  </svg>
-												  <img src="images/mask3.png" width="200px" height="200px" style="padding: 10px;">
-												  <span>받아올 값</span>
-											   </div>
+											 
 											</div><!-- /grid -->
 										 </section>
+										 
 										
-										
 
 
 
-								</div>
+								</div><br><br><br>
 									
 											
 									
@@ -1148,12 +1286,12 @@
 							
 
 							<!-- Section -->
-							<div>
-								<header class="major">
-									<h2>일단비워둘께!!</h2>
+						<div>
+								<header class="major" >
+									
+									
 								</header>
-							</div>
-								
+							</div> 								
 
 						</div>
 					</div>	
@@ -1166,24 +1304,28 @@
 
 							<!-- Search -->
 								
-								<section id="search" class="alt">
+								<!-- <section id="search" class="alt">
 									<form method="post" action="#">
 										<input type="text" name="query" id="query" placeholder="Search" />
 									</form>
-								</section>
+								</section> -->
 
 							<!-- Menu -->
 							
 							
 
 							<!-- Section -->
-								<section>
+								<section style="margin: 0px;">
 									<header class="major">
-										<strong style="font-family: THE스피드; font-size: 30px;">실시간 코로나 상황</strong><br><br>
+										<h3 style="font-family: 나눔고딕; font-size: 25pt;">실시간 코로나 상황</h3>
 									</header>
 									<div class="mini-posts">
+<<<<<<< HEAD
 									
 										<article>
+=======
+								<article>
+>>>>>>> branch 'ran' of https://github.com/lshwan1991/3nd_Team.git
 											<%-- <%
 												Crawling craw = new Crawling();
 												List<WebElement> list = craw.Crawling_Co();
@@ -1192,6 +1334,7 @@
 													System.out.println(list.get(i).getText());
 												}
 											%> --%>
+<<<<<<< HEAD
 
 
 							
@@ -1203,14 +1346,97 @@
 											<a href="https://www.gwangju.go.kr/c19/"  class="image"><img src="images/time.PNG" alt="" /></a>
 											<p style="font-family: Cafe24Ohsquareair;">광주광역시 실시간 코로나 상황페이지 입니다.</p>
 										</article></div>
+=======
+									
+										<div style="border: 5px solid #fff; font-family: 나눔고딕">
+											
+											<div style="background-color: #8EA3CA; opacity: 0.8;">
+												<span style="font-size: 18pt; font-family: 나눔고딕; font-weight: bold; color: #fff">확진환자</span>
+											</div>
+											<div>
+											<div style="background-color: #8EA3CA; opacity: 0.8;">
+												<span style="font-size: 15px; font-family: 나눔고딕">명</span>
+											</div><br>
+											<div align="left">
+												<span>치료중 : </span>
+											</div>
+											<div align="left">
+												<span>격리해제 : </span>
+											</div>
+											<div align="left">
+												<span>사망 : </span>
+											</div>
+											</div>
+										</div><br>
+										
+										
+										<div style="border: 5px solid #fff; font-family: 나눔고딕">
+											
+											<div style="background-color: #8EA3CA; opacity: 0.8;">
+												<span style="font-size: 18pt; font-family: 나눔고딕; color: #fff">검사현황</span>
+											</div>
+											<div style="background-color: #8EA3CA; opacity: 0.8;">
+												<span style="font-size: 15px; font-family: 나눔고딕">명</span>
+											</div><br>
+											<div align="left">
+												<span>양성 : </span>; 
+											</div>
+											<div align="left">
+												<span>음성 : </span>
+											</div>
+											<div align="left">
+												<span>검사중 : </span>
+											</div>
+										</div><br>		
+											
+										<div style="border: 5px solid #fff; font-family: 나눔고딕">
+											
+											<div style="background-color: #8EA3CA; opacity: 0.8;">
+												<span style="font-size: 18pt; font-family: 나눔고딕; color: #fff">접촉자</span>
+											</div>
+											<div style="background-color: #8EA3CA; opacity: 0.8;">
+												<span style="font-size: 15px; font-family: 나눔고딕">명</span>
+											</div><br>
+											<div align="left">
+												<span>격리중 : </span>
+											</div>
+											<div align="left">
+												<span>격리해제 : </span>
+											</div>
+										</div><br>
+										
+										<div style="border: 5px solid #fff; font-family: 나눔고딕">
+											
+											<div style="background-color: #8EA3CA; opacity: 0.8;">
+												<span style="font-size: 18pt; font-family: 나눔고딕; color: #fff">자치구별 발생 현황</span>
+											</div><br>
+											<div align="left">
+												<span>동구 : </span>
+											</div>
+											<div align="left">
+												<span>서구 : </span>
+											</div>
+											<div align="left">
+												<span>남구 : </span>
+											</div>
+											<div align="left">
+												<span>북구 : </span>
+											</div>
+											<div align="left">
+												<span>광산구 : </span>
+											</div>
+										</div>	
+											
+								</article>
+>>>>>>> branch 'ran' of https://github.com/lshwan1991/3nd_Team.git
 
 										
 										<article>
 											<header class="major">
-												<strong style="font-family: THE스피드; font-size: 30px;">광주광역시 선별진료소</strong><br><br>
+												<h3 align="center" style="font-family: 나눔고딕; font-size: 25pt;">광주 선별 진료소</h3>
 											</header>
-											<a href="https://www.gwangju.go.kr/c19/c19/contentsView.do?pageId=coronagj6" target="blank" class="image"><img src="images/time2.jpg" alt="" /></a>
-											<p style="font-family: Cafe24Ohsquareair;">광주광역시 선별진료소 페이지 입니다.</p>
+											<a href="https://www.gwangju.go.kr/c19/c19/contentsView.do?pageId=coronagj6" target="blank" class="image"><img src="images/covid.jpg" alt="" align="middle" /></a>
+											<p style="font-family: GmarketSansLight;">광주광역시 선별진료소 페이지 입니다.</p>
 										</article>
 										<!-- <article>
 											<header class="major">
@@ -1226,7 +1452,7 @@
 								</section>
 
 							<!-- Section -->
-								<section>
+								<section style="font-family: 나눔고딕">
 									<header class="major">
 										<h2>COMPANY</h2>
 									</header>

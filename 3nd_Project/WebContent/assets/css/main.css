@@ -2062,7 +2062,8 @@ button,
         text-indent: 5em;
         width: 5em; }
         #sidebar .toggle:before {
-          font-size: 1.5rem; }
+          font-size: 1.5rem;
+          color: #000; }
       #sidebar.inactive {
         margin-left: -24em; } }
   @media screen and (max-width: 1280px) {
@@ -2093,7 +2094,8 @@ button,
         width: 6em; }
         #sidebar .toggle:before {
           font-size: 1.5rem;
-          margin-left: -0.4375em; }
+          margin-left: -0.4375em;
+          color: #000; }
       body.is-preload #sidebar {
         display: none; } }
   @media screen and (max-width: 736px) {
