@@ -15,7 +15,7 @@
 .clearfix:after { clear: both; }
 
 body {
-	/* background: #95a5a6; */
+	
 	color: #000;
 	background-color: #fff;
 	
@@ -26,8 +26,8 @@ body {
 
 h3 {
 	/* margin: 20px; */
-	font-family: "THE½ºÇÇµå";
-	color: #202020;
+	font-family: "¸¼Àº°íµñ";
+	color: #616161;
 	text-transform: uppercase;
 	letter-spacing: -2px;
 	text-align: left;
@@ -38,8 +38,8 @@ h3 {
 	margin: 11px 0 17px 0;
 	font-size: 50px;
 	line-height: 80px;
-	color: #9E9E9E;
-	text-shadow: 0 13.36px 8.896px #c4b59d,0 -2px 1px #fff;
+	color: #616161;
+	text-shadow: 0 13.36px 8.896px #9E9E9E -2px 1px #E0E0E0;
 	letter-spacing: -4px;
   }
 
