@@ -2,7 +2,7 @@
 <%@page import="org.openqa.selenium.WebElement"%>
 <%@page import="Test.Ajax.Crawling"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <!--
    Editorial by HTML5 UP
@@ -13,7 +13,7 @@
    <head>
       <title>Editorial by HTML5 UP</title>
       <style>
-      
+      @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css); .nanumgothic * { font-family: 'Nanum Gothic', sans-serif; }
       @font-face { font-family: 'GmarketSansMedium'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff'); font-weight: normal; font-style: normal; }
       @font-face {
        font-family: 'GmarketSansLight';
@@ -68,7 +68,7 @@
          
          
          
-         /* ¸ŞÀÎ ÀÌ¹ÌÁö */
+         /* ë©”ì¸ ì´ë¯¸ì§€ */
             .zoom {
             overflow: hidden;
            /*  padding: 10px; */
@@ -81,7 +81,7 @@
             width: 300px;
             height: 300px;
             margin: 2%;
-            display: inline-block; /* °¡·Î·Î ¹èÄ¡ */
+            display: inline-block; /* ê°€ë¡œë¡œ ë°°ì¹˜ */
             opacity: 0.7; 
             filter: alpha(opacity=50);
 
@@ -457,6 +457,98 @@
             cursor: default;
             color: #777;
         }
+        
+        
+/* gauge    */
+
+		  /* .current-roll {
+		     -webkit-appearance: none;
+		     width: 80%;
+		     height: 25px;
+		     next line does nothing 
+		      color: #f7a700;
+		}  
+		
+		 .current-roll2 {
+		     -webkit-appearance: none;
+		     width: 80%;
+		     height: 25px;
+		     next line does nothing
+		      color: #f7a700; 
+		}  
+		
+		
+		progress.current-roll::-webkit-progress-bar {
+		     background: #fffaf0;
+		     border-radius: 5px;
+		}
+		progress.current-roll::-webkit-progress-value {
+		     background: red;
+		     border-radius: 5px;
+		}
+		
+		
+		progress.current-roll2::-webkit-progress-bar {
+		     background: #fffaf0;
+		     border-radius: 5px;
+		}
+		progress.current-roll2::-webkit-progress-value {
+		     background: blue;
+		     border-radius: 5px;
+		}*/
+		
+		
+		
+		.progress {
+    height: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    /* -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1); */
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+    }
+    
+    .progress-bar-success {
+    background-color: #5cb85c;
+}
+.progress-bar-danger {
+    background-color: #d9534f;
+}
+
+.progress.active .progress-bar, .progress-bar.active {
+    /* -webkit-animation: progress-bar-stripes 2s linear infinite; */
+    /* -o-animation: progress-bar-stripes 2s linear infinite; */
+    animation: progress-bar-stripes 2s linear infinite;
+}
+
+.progress-striped .progress-bar, .progress-bar-striped {
+    /* background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent); */
+    /* background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent); */
+    background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    /* -webkit-background-size: 40px 40px; */
+    background-size: 40px 40px;
+}
+.progress-bar {
+    float: left;
+    /* width: 0; */
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    /* background-color: #428bca; */
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
+}
+
+ @keyframes progress-bar-stripes{from{background-position:40px 0;}
+
+
+
 
 
 
@@ -490,6 +582,12 @@
       
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <!----------------------------------------->
+      
+      <!-- bar -->
+      <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" /> -->
+  	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script> 
+  	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+      
    </head>
    <body class="is-preload" style="background-color: #fff;">
       
@@ -500,7 +598,7 @@
             
 
             <!-- Main -->
-            <!-- ¹­À»²¨¾ß-->
+            <!-- ë¬¶ì„êº¼ì•¼-->
             
                <div id="main">
                   <div class="inner">
@@ -518,12 +616,12 @@
                            
                            <section> <!-- color: #9E9E9E; -->
                               <header class="major">
-                                 <!-- <h4 style="font-family: THE½ºÇÇµå;">¸ÅÀå CCTV¸¦ ºĞ¼® ¾ÈÀüÇÑ ¸ÅÀåÀ» ÃßÃµÇØÁÖ´Â ¼­ºñ½º</h4> -->
-                                 <h1 style="font-family: ³ª´®°íµñ; color:#263238; padding: 10px; margin-bottom:50px; margin-top: 50px" class="mb-5 text-primary font-weight-bold"  data-aos="fade-up" style="width: 100px;">Care - Zone ¿¡¼­<br> <span style="font-family: ³ª´®°íµñ; color:#263238 ;" class="typed-words">Æí¸®ÇÏ°Ô º¸¿©µå¸³´Ï´Ù.</span></h1>
+                                 <!-- <h4 style="font-family: THEìŠ¤í”¼ë“œ;">ë§¤ì¥ CCTVë¥¼ ë¶„ì„ ì•ˆì „í•œ ë§¤ì¥ì„ ì¶”ì²œí•´ì£¼ëŠ” ì„œë¹„ìŠ¤</h4> -->
+                                 <h1 style="font-family: ë‚˜ëˆ”ê³ ë”•; color:#263238!important; padding: 10px; margin-bottom:50px; margin-top: 50px" class="mb-5 text-primary font-weight-bold"  data-aos="fade-up" style="width: 100px;">Care - Zone ì—ì„œ<br> <span style="font-family: ë‚˜ëˆ”ê³ ë”•; color:#263238 ;" class="typed-words">í¸ë¦¬í•˜ê²Œ ë³´ì—¬ë“œë¦½ë‹ˆë‹¤.</span></h1>
                                  <script src="js/typed.js"></script> 
                                  <script>
                                  var typed = new Typed('.typed-words', {
-                                 strings: ["ÄÚ·Î³ªºÎÅÍ ¾ÈÀüÇÑ ¸ÅÀå È®ÀÎ","È®ÁøÀÚ ÀÌµ¿°æ·Î È®ÀÎ"," ¸ÅÀåÀÇ ¹æ¿ª À¯¹« È®ÀÎ", " ÇÔ²² ÀÌ±æ¼ö ÀÖ½À´Ï´Ù!"],
+                                 strings: ["ì½”ë¡œë‚˜ë¶€í„° ì•ˆì „í•œ ë§¤ì¥ í™•ì¸","í™•ì§„ì ì´ë™ê²½ë¡œ í™•ì¸"," ë§¤ì¥ì˜ ë°©ì—­ ìœ ë¬´ í™•ì¸", " í•¨ê»˜ ì´ê¸¸ìˆ˜ ìˆìŠµë‹ˆë‹¤!"],
                                  typeSpeed: 80,
                                  backSpeed: 80,
                                  backDelay: 4000,
@@ -540,19 +638,13 @@
                         </div>
                         
                         </header>
-                     <!-- ¿©±â±îÁö -->
+                     <!-- ì—¬ê¸°ê¹Œì§€ -->
                      <div text-align:center;">
-                           
+                           <!-- main img  -->
                               <div id="main_img">
-                                 <!-- <div class="zoom"><img alt="" src="images/coco1.png"></div>
-                                 <div class="zoom"><img alt="" src="images/coco2.png"></div>
-                                 <div class="zoom"><img alt="" src="images/coco3.png"></div> --> 
-                                 
                                  <div class="zoom"><img alt="" src="images/main_img1.jpg"></div>
                                  <div class="zoom"><img alt="" src="images/main_img2.jpg"></div>
                                  <div class="zoom"><img alt="" src="images/main_img3.jpg"></div>
-                                 
-                              
                               </div>
                            
                         </div>
@@ -590,7 +682,7 @@
                                  border-left-style: solid;
                                  border-left-color: slateblue;
                                  font-size: 24pt; color: #fff;
-                                 font-family: '³ª´®°íµñ';
+                                 font-family: 'ë‚˜ëˆ”ê³ ë”•';
                                  border-bottom-width: 1px;
                                  letter-spacing: -0.07em;
                                  text-align: left;
@@ -603,12 +695,13 @@
                                  <h4 style="font-size: 20pt"><strong>MAP </strong>Page</h4>
                               </div>
                                -->
-                                    <h3>Àå¼Ò¸¦ ¼±ÅÃÇÏ¼¼¿ä.</h3>
-                                    <h3>Àå¼Ò¸¦ ¼±ÅÃÇÏ°í ¾Æ·¡ ¾ÈÀüÁ¡¼ö¸¦ È®ÀÎÇÏ¼¼¿ä.</h3>
+                               	
+                                    <h3 style="font-family: ë‚˜ëˆ”ê³ ë”•">ì¥ì†Œë¥¼ ì„ íƒí•˜ì„¸ìš”.</h3>
+                                    <h3 style="font-family: ë‚˜ëˆ”ê³ ë”•">ì¥ì†Œë¥¼ ì„ íƒí•˜ê³  ì•„ë˜ ì•ˆì „ì ìˆ˜ë¥¼ í™•ì¸í•˜ì„¸ìš”.</h3>
                                     <p style="margin-top:-12px"></p>
-                                    
+                               
                               
-                              
+                              <!--  map ì‹œì‘    ----------------------------------------------------------------------------->
                                  
                                  <div class="map_wrap">
                                     <div id="map" style="width:1000px;height:500px;position:relative;overflow:hidden; box-shadow: 20px 20px 20px grey;"></div>
@@ -616,15 +709,15 @@
                               
                                        <li id="CE7" data-order="4">
                                           <span class="category_bg cafe"></span>
-                                          Ä«Æä
+                                          ì¹´í˜
                                        </li>
                                        <li id="FD6" data-order="1">
                                           <span class="category_bg restaurant"></span>
-                                          ½Ä´ç
+                                          ì‹ë‹¹
                                        </li>
                                        <li id="CS2" data-order="5">
                                           <span class="category_bg store"></span>
-                                          ÆíÀÇÁ¡
+                                          í¸ì˜ì 
                                        </li>
                               
                                     </ul>
@@ -633,9 +726,8 @@
                                     <div id="menu_wrap" class="bg_white">
                                        <div class="option">
                                           <div>
-                                             <form onsubmit="searchPlaces(); return false;">
-                                                Å°¿öµå : <input type="text" value="±¤ÁÖ ¼ÛÇÏµ¿ Ä«Æä" id="keyword" size="15">
-                                                <button type="submit">°Ë»öÇÏ±â</button>
+                                             <form onsubmit="searchPlaces(); return false;" style="font-size: 15px; font-family: ë‚˜ëˆ”ê³ ë”•; color: #000">í‚¤ì›Œë“œ : <input type="text" value="ê´‘ì£¼ ë§›ì§‘" id="keyword" size="15">
+                                                <button type="submit" style="height: 40px; width: 60px;">ê²€ìƒ‰í•˜ê¸°</button>
                                              </form>
                                           </div>
                                        </div>
@@ -648,43 +740,43 @@
                                  <script type="text/javascript"
                                     src="//dapi.kakao.com/v2/maps/sdk.js?appkey=423cd019a50dfcc92ba9643b89dbfcd2&libraries=services"></script>
                                  <script>
-                                    // ¸¶Ä¿¸¦ Å¬¸¯ÇßÀ» ¶§ ÇØ´ç Àå¼ÒÀÇ »ó¼¼Á¤º¸¸¦ º¸¿©ÁÙ Ä¿½ºÅÒ¿À¹ö·¹ÀÌÀÔ´Ï´Ù
+                                    // ë§ˆì»¤ë¥¼ í´ë¦­í–ˆì„ ë•Œ í•´ë‹¹ ì¥ì†Œì˜ ìƒì„¸ì •ë³´ë¥¼ ë³´ì—¬ì¤„ ì»¤ìŠ¤í…€ì˜¤ë²„ë ˆì´ì…ë‹ˆë‹¤
                                     var placeOverlay1 = new kakao.maps.CustomOverlay({ zIndex: 1 }),
-                                       contentNode1 = document.createElement('div'), // Ä¿½ºÅÒ ¿À¹ö·¹ÀÌÀÇ ÄÁÅÙÃ÷ ¿¤¸®¸ÕÆ® ÀÔ´Ï´Ù 
-                                       markers1 = []; // Ä«Å×°í¸®°Ë»ö ¸¶Ä¿¸¦ ´ãÀ» ¹è¿­ÀÔ´Ï´Ù
-                                    markers = []; // Å°¿öµå°Ë»ö ¸¶Ä¿¸¦ ´ãÀ» ¹è¿­ÀÔ´Ï´Ù
-                                    currCategory1 = ''; // ÇöÀç ¼±ÅÃµÈ Ä«Å×°í¸®¸¦ °¡Áö°í ÀÖÀ» º¯¼öÀÔ´Ï´Ù
+                                       contentNode1 = document.createElement('div'), // ì»¤ìŠ¤í…€ ì˜¤ë²„ë ˆì´ì˜ ì»¨í…ì¸  ì—˜ë¦¬ë¨¼íŠ¸ ì…ë‹ˆë‹¤ 
+                                       markers1 = []; // ì¹´í…Œê³ ë¦¬ê²€ìƒ‰ ë§ˆì»¤ë¥¼ ë‹´ì„ ë°°ì—´ì…ë‹ˆë‹¤
+                                    markers = []; // í‚¤ì›Œë“œê²€ìƒ‰ ë§ˆì»¤ë¥¼ ë‹´ì„ ë°°ì—´ì…ë‹ˆë‹¤
+                                    currCategory1 = ''; // í˜„ì¬ ì„ íƒëœ ì¹´í…Œê³ ë¦¬ë¥¼ ê°€ì§€ê³  ìˆì„ ë³€ìˆ˜ì…ë‹ˆë‹¤
                               
-                                    var mapContainer1 = document.getElementById('map'), // Áöµµ¸¦ Ç¥½ÃÇÒ div 
+                                    var mapContainer1 = document.getElementById('map'), // ì§€ë„ë¥¼ í‘œì‹œí•  div 
                                        mapOption1 = {
-                                          center: new kakao.maps.LatLng(37.566826, 126.9786567), // ÁöµµÀÇ Áß½ÉÁÂÇ¥
-                                          level: 5 // ÁöµµÀÇ È®´ë ·¹º§
+                                          center: new kakao.maps.LatLng(37.566826, 126.9786567), // ì§€ë„ì˜ ì¤‘ì‹¬ì¢Œí‘œ
+                                          level: 5 // ì§€ë„ì˜ í™•ëŒ€ ë ˆë²¨
                                        };
                               
                               
                                     var map = new kakao.maps.Map(mapContainer1, mapOption1);
                               
-                                    // Àå¼Ò °Ë»ö °´Ã¼¸¦ »ı¼ºÇÕ´Ï´Ù
+                                    // ì¥ì†Œ ê²€ìƒ‰ ê°ì²´ë¥¼ ìƒì„±í•©ë‹ˆë‹¤
                                     var ps1 = new kakao.maps.services.Places(map);
                               
-                                    // Áöµµ¿¡ idle ÀÌº¥Æ®¸¦ µî·ÏÇÕ´Ï´Ù
+                                    // ì§€ë„ì— idle ì´ë²¤íŠ¸ë¥¼ ë“±ë¡í•©ë‹ˆë‹¤
                                     kakao.maps.event.addListener(map, 'idle', searchPlaces1);
                               
-                                    // Ä¿½ºÅÒ ¿À¹ö·¹ÀÌÀÇ ÄÁÅÙÃ÷ ³ëµå¿¡ css class¸¦ Ãß°¡ÇÕ´Ï´Ù 
+                                    // ì»¤ìŠ¤í…€ ì˜¤ë²„ë ˆì´ì˜ ì»¨í…ì¸  ë…¸ë“œì— css classë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤ 
                                     contentNode1.className = 'placeinfo_wrap';
                               
-                                    // Ä¿½ºÅÒ ¿À¹ö·¹ÀÌÀÇ ÄÁÅÙÃ÷ ³ëµå¿¡ mousedown, touchstart ÀÌº¥Æ®°¡ ¹ß»ıÇßÀ»¶§
-                                    // Áöµµ °´Ã¼¿¡ ÀÌº¥Æ®°¡ Àü´ŞµÇÁö ¾Êµµ·Ï ÀÌº¥Æ® ÇÚµé·¯·Î kakao.maps.event.preventMap ¸Ş¼Òµå¸¦ µî·ÏÇÕ´Ï´Ù 
+                                    // ì»¤ìŠ¤í…€ ì˜¤ë²„ë ˆì´ì˜ ì»¨í…ì¸  ë…¸ë“œì— mousedown, touchstart ì´ë²¤íŠ¸ê°€ ë°œìƒí–ˆì„ë•Œ
+                                    // ì§€ë„ ê°ì²´ì— ì´ë²¤íŠ¸ê°€ ì „ë‹¬ë˜ì§€ ì•Šë„ë¡ ì´ë²¤íŠ¸ í•¸ë“¤ëŸ¬ë¡œ kakao.maps.event.preventMap ë©”ì†Œë“œë¥¼ ë“±ë¡í•©ë‹ˆë‹¤ 
                                     addEventHandle1(contentNode1, 'mousedown', kakao.maps.event.preventMap);
                                     addEventHandle1(contentNode1, 'touchstart', kakao.maps.event.preventMap);
                               
-                                    // Ä¿½ºÅÒ ¿À¹ö·¹ÀÌ ÄÁÅÙÃ÷¸¦ ¼³Á¤ÇÕ´Ï´Ù
+                                    // ì»¤ìŠ¤í…€ ì˜¤ë²„ë ˆì´ ì»¨í…ì¸ ë¥¼ ì„¤ì •í•©ë‹ˆë‹¤
                                     placeOverlay1.setContent(contentNode1);
                               
-                                    // °¢ Ä«Å×°í¸®¿¡ Å¬¸¯ ÀÌº¥Æ®¸¦ µî·ÏÇÕ´Ï´Ù
+                                    // ê° ì¹´í…Œê³ ë¦¬ì— í´ë¦­ ì´ë²¤íŠ¸ë¥¼ ë“±ë¡í•©ë‹ˆë‹¤
                                     addCategoryClickEvent1();
                               
-                                    // ¿¤¸®¸ÕÆ®¿¡ ÀÌº¥Æ® ÇÚµé·¯¸¦ µî·ÏÇÏ´Â ÇÔ¼öÀÔ´Ï´Ù
+                                    // ì—˜ë¦¬ë¨¼íŠ¸ì— ì´ë²¤íŠ¸ í•¸ë“¤ëŸ¬ë¥¼ ë“±ë¡í•˜ëŠ” í•¨ìˆ˜ì…ë‹ˆë‹¤
                                     function addEventHandle1(target, type, callback) {
                                        if (target.addEventListener) {
                                           target.addEventListener(type, callback);
@@ -693,51 +785,51 @@
                                        }
                                     }
                               
-                                    // Ä«Å×°í¸® °Ë»öÀ» ¿äÃ»ÇÏ´Â ÇÔ¼öÀÔ´Ï´Ù
+                                    // ì¹´í…Œê³ ë¦¬ ê²€ìƒ‰ì„ ìš”ì²­í•˜ëŠ” í•¨ìˆ˜ì…ë‹ˆë‹¤
                                     function searchPlaces1() {
                                        if (!currCategory1) {
                                           return;
                                        }
                               
-                                       // Ä¿½ºÅÒ ¿À¹ö·¹ÀÌ¸¦ ¼û±é´Ï´Ù 
+                                       // ì»¤ìŠ¤í…€ ì˜¤ë²„ë ˆì´ë¥¼ ìˆ¨ê¹ë‹ˆë‹¤ 
                                        placeOverlay1.setMap(null);
                               
-                                       // Áöµµ¿¡ Ç¥½ÃµÇ°í ÀÖ´Â ¸¶Ä¿¸¦ Á¦°ÅÇÕ´Ï´Ù
+                                       // ì§€ë„ì— í‘œì‹œë˜ê³  ìˆëŠ” ë§ˆì»¤ë¥¼ ì œê±°í•©ë‹ˆë‹¤
                                        removeMarker1();
                               
                                        ps1.categorySearch(currCategory1, placesSearchCB1, { useMapBounds: true });
                                     }
                               
-                                    // Àå¼Ò°Ë»öÀÌ ¿Ï·áµÆÀ» ¶§ È£ÃâµÇ´Â Äİ¹éÇÔ¼ö ÀÔ´Ï´Ù
+                                    // ì¥ì†Œê²€ìƒ‰ì´ ì™„ë£Œëì„ ë•Œ í˜¸ì¶œë˜ëŠ” ì½œë°±í•¨ìˆ˜ ì…ë‹ˆë‹¤
                                     function placesSearchCB1(data, status, pagination) {
                                        if (status === kakao.maps.services.Status.OK) {
-                                          // Á¤»óÀûÀ¸·Î °Ë»öÀÌ ¿Ï·áµÆÀ¸¸é Áöµµ¿¡ ¸¶Ä¿¸¦ Ç¥ÃâÇÕ´Ï´Ù
+                                          // ì •ìƒì ìœ¼ë¡œ ê²€ìƒ‰ì´ ì™„ë£Œëìœ¼ë©´ ì§€ë„ì— ë§ˆì»¤ë¥¼ í‘œì¶œí•©ë‹ˆë‹¤
                                           displayPlaces1(data);
                                        } else if (status === kakao.maps.services.Status.ZERO_RESULT) {
-                                          // °Ë»ö°á°ú°¡ ¾ø´Â°æ¿ì ÇØ¾ßÇÒ Ã³¸®°¡ ÀÖ´Ù¸é ÀÌ°÷¿¡ ÀÛ¼ºÇØ ÁÖ¼¼¿ä
+                                          // ê²€ìƒ‰ê²°ê³¼ê°€ ì—†ëŠ”ê²½ìš° í•´ì•¼í•  ì²˜ë¦¬ê°€ ìˆë‹¤ë©´ ì´ê³³ì— ì‘ì„±í•´ ì£¼ì„¸ìš”
                               
                                        } else if (status === kakao.maps.services.Status.ERROR) {
-                                          // ¿¡·¯·Î ÀÎÇØ °Ë»ö°á°ú°¡ ³ª¿ÀÁö ¾ÊÀº °æ¿ì ÇØ¾ßÇÒ Ã³¸®°¡ ÀÖ´Ù¸é ÀÌ°÷¿¡ ÀÛ¼ºÇØ ÁÖ¼¼¿ä
+                                          // ì—ëŸ¬ë¡œ ì¸í•´ ê²€ìƒ‰ê²°ê³¼ê°€ ë‚˜ì˜¤ì§€ ì•Šì€ ê²½ìš° í•´ì•¼í•  ì²˜ë¦¬ê°€ ìˆë‹¤ë©´ ì´ê³³ì— ì‘ì„±í•´ ì£¼ì„¸ìš”
                               
                                        }
                                     }
                               
-                                    // Áöµµ¿¡ ¸¶Ä¿¸¦ Ç¥ÃâÇÏ´Â ÇÔ¼öÀÔ´Ï´Ù
+                                    // ì§€ë„ì— ë§ˆì»¤ë¥¼ í‘œì¶œí•˜ëŠ” í•¨ìˆ˜ì…ë‹ˆë‹¤
                                     function displayPlaces1(places) {
                               
-                                       // ¸î¹øÂ° Ä«Å×°í¸®°¡ ¼±ÅÃµÇ¾î ÀÖ´ÂÁö ¾ò¾î¿É´Ï´Ù
-                                       // ÀÌ ¼ø¼­´Â ½ºÇÁ¶óÀÌÆ® ÀÌ¹ÌÁö¿¡¼­ÀÇ À§Ä¡¸¦ °è»êÇÏ´Âµ¥ »ç¿ëµË´Ï´Ù
+                                       // ëª‡ë²ˆì§¸ ì¹´í…Œê³ ë¦¬ê°€ ì„ íƒë˜ì–´ ìˆëŠ”ì§€ ì–»ì–´ì˜µë‹ˆë‹¤
+                                       // ì´ ìˆœì„œëŠ” ìŠ¤í”„ë¼ì´íŠ¸ ì´ë¯¸ì§€ì—ì„œì˜ ìœ„ì¹˜ë¥¼ ê³„ì‚°í•˜ëŠ”ë° ì‚¬ìš©ë©ë‹ˆë‹¤
                                        var order = document.getElementById(currCategory1).getAttribute('data-order');
                               
                               
                               
                                        for (var i = 0; i < places.length; i++) {
                               
-                                          // ¸¶Ä¿¸¦ »ı¼ºÇÏ°í Áöµµ¿¡ Ç¥½ÃÇÕ´Ï´Ù
+                                          // ë§ˆì»¤ë¥¼ ìƒì„±í•˜ê³  ì§€ë„ì— í‘œì‹œí•©ë‹ˆë‹¤
                                           var marker = addMarker1(new kakao.maps.LatLng(places[i].y, places[i].x), order);
                               
-                                          // ¸¶Ä¿¿Í °Ë»ö°á°ú Ç×¸ñÀ» Å¬¸¯ ÇßÀ» ¶§
-                                          // Àå¼ÒÁ¤º¸¸¦ Ç¥ÃâÇÏµµ·Ï Å¬¸¯ ÀÌº¥Æ®¸¦ µî·ÏÇÕ´Ï´Ù
+                                          // ë§ˆì»¤ì™€ ê²€ìƒ‰ê²°ê³¼ í•­ëª©ì„ í´ë¦­ í–ˆì„ ë•Œ
+                                          // ì¥ì†Œì •ë³´ë¥¼ í‘œì¶œí•˜ë„ë¡ í´ë¦­ ì´ë²¤íŠ¸ë¥¼ ë“±ë¡í•©ë‹ˆë‹¤
                                           (function (marker, place) {
                                              kakao.maps.event.addListener(marker, 'click', function () {
                                                 displayPlaceInfo(place);
@@ -746,28 +838,28 @@
                                        }
                                     }
                               
-                                    // ¸¶Ä¿¸¦ »ı¼ºÇÏ°í Áöµµ À§¿¡ ¸¶Ä¿¸¦ Ç¥½ÃÇÏ´Â ÇÔ¼öÀÔ´Ï´Ù
+                                    // ë§ˆì»¤ë¥¼ ìƒì„±í•˜ê³  ì§€ë„ ìœ„ì— ë§ˆì»¤ë¥¼ í‘œì‹œí•˜ëŠ” í•¨ìˆ˜ì…ë‹ˆë‹¤
                                     function addMarker1(position, order) {
-                                       var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_category.png', // ¸¶Ä¿ ÀÌ¹ÌÁö url, ½ºÇÁ¶óÀÌÆ® ÀÌ¹ÌÁö¸¦ ¾¹´Ï´Ù
-                                          imageSize = new kakao.maps.Size(27, 28),  // ¸¶Ä¿ ÀÌ¹ÌÁöÀÇ Å©±â
+                                       var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_category.png', // ë§ˆì»¤ ì´ë¯¸ì§€ url, ìŠ¤í”„ë¼ì´íŠ¸ ì´ë¯¸ì§€ë¥¼ ì”ë‹ˆë‹¤
+                                          imageSize = new kakao.maps.Size(27, 28),  // ë§ˆì»¤ ì´ë¯¸ì§€ì˜ í¬ê¸°
                                           imgOptions = {
-                                             spriteSize: new kakao.maps.Size(72, 208), // ½ºÇÁ¶óÀÌÆ® ÀÌ¹ÌÁöÀÇ Å©±â
-                                             spriteOrigin: new kakao.maps.Point(46, (order * 36)), // ½ºÇÁ¶óÀÌÆ® ÀÌ¹ÌÁö Áß »ç¿ëÇÒ ¿µ¿ªÀÇ ÁÂ»ó´Ü ÁÂÇ¥
-                                             offset: new kakao.maps.Point(11, 28) // ¸¶Ä¿ ÁÂÇ¥¿¡ ÀÏÄ¡½ÃÅ³ ÀÌ¹ÌÁö ³»¿¡¼­ÀÇ ÁÂÇ¥
+                                             spriteSize: new kakao.maps.Size(72, 208), // ìŠ¤í”„ë¼ì´íŠ¸ ì´ë¯¸ì§€ì˜ í¬ê¸°
+                                             spriteOrigin: new kakao.maps.Point(46, (order * 36)), // ìŠ¤í”„ë¼ì´íŠ¸ ì´ë¯¸ì§€ ì¤‘ ì‚¬ìš©í•  ì˜ì—­ì˜ ì¢Œìƒë‹¨ ì¢Œí‘œ
+                                             offset: new kakao.maps.Point(11, 28) // ë§ˆì»¤ ì¢Œí‘œì— ì¼ì¹˜ì‹œí‚¬ ì´ë¯¸ì§€ ë‚´ì—ì„œì˜ ì¢Œí‘œ
                                           },
                                           markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imgOptions),
                                           marker = new kakao.maps.Marker({
-                                             position: position, // ¸¶Ä¿ÀÇ À§Ä¡
+                                             position: position, // ë§ˆì»¤ì˜ ìœ„ì¹˜
                                              image: markerImage
                                           });
                               
-                                       marker.setMap(map); // Áöµµ À§¿¡ ¸¶Ä¿¸¦ Ç¥ÃâÇÕ´Ï´Ù
-                                       markers1.push(marker);  // ¹è¿­¿¡ »ı¼ºµÈ ¸¶Ä¿¸¦ Ãß°¡ÇÕ´Ï´Ù
+                                       marker.setMap(map); // ì§€ë„ ìœ„ì— ë§ˆì»¤ë¥¼ í‘œì¶œí•©ë‹ˆë‹¤
+                                       markers1.push(marker);  // ë°°ì—´ì— ìƒì„±ëœ ë§ˆì»¤ë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤
                               
                                        return marker;
                                     }
                               
-                                    // Áöµµ À§¿¡ Ç¥½ÃµÇ°í ÀÖ´Â ¸¶Ä¿¸¦ ¸ğµÎ Á¦°ÅÇÕ´Ï´Ù
+                                    // ì§€ë„ ìœ„ì— í‘œì‹œë˜ê³  ìˆëŠ” ë§ˆì»¤ë¥¼ ëª¨ë‘ ì œê±°í•©ë‹ˆë‹¤
                                     function removeMarker1() {
                                        for (var i = 0; i < markers1.length; i++) {
                                           markers1[i].setMap(null);
@@ -775,14 +867,14 @@
                                        markers1 = [];
                                     }
                               
-                                    // Å¬¸¯ÇÑ ¸¶Ä¿¿¡ ´ëÇÑ Àå¼Ò »ó¼¼Á¤º¸¸¦ Ä¿½ºÅÒ ¿À¹ö·¹ÀÌ·Î Ç¥½ÃÇÏ´Â ÇÔ¼öÀÔ´Ï´Ù
+                                    // í´ë¦­í•œ ë§ˆì»¤ì— ëŒ€í•œ ì¥ì†Œ ìƒì„¸ì •ë³´ë¥¼ ì»¤ìŠ¤í…€ ì˜¤ë²„ë ˆì´ë¡œ í‘œì‹œí•˜ëŠ” í•¨ìˆ˜ì…ë‹ˆë‹¤
                                     function displayPlaceInfo(place) {
                                        var content = '<div class="placeinfo">' +
                                           '   <a class="title" href="' + place.place_url + '" target="_blank" title="' + place.place_name + '">' + place.place_name + '</a>';
                               
                                        if (place.road_address_name) {
                                           content += '    <span title="' + place.road_address_name + '">' + place.road_address_name + '</span>' +
-                                             '  <span class="jibun" title="' + place.address_name + '">(Áö¹ø : ' + place.address_name + ')</span>';
+                                             '  <span class="jibun" title="' + place.address_name + '">(ì§€ë²ˆ : ' + place.address_name + ')</span>';
                                        } else {
                                           content += '    <span title="' + place.address_name + '">' + place.address_name + '</span>';
                                        }
@@ -797,7 +889,7 @@
                                     }
                               
                               
-                                    // °¢ Ä«Å×°í¸®¿¡ Å¬¸¯ ÀÌº¥Æ®¸¦ µî·ÏÇÕ´Ï´Ù
+                                    // ê° ì¹´í…Œê³ ë¦¬ì— í´ë¦­ ì´ë²¤íŠ¸ë¥¼ ë“±ë¡í•©ë‹ˆë‹¤
                                     function addCategoryClickEvent1() {
                                        var category = document.getElementById('category'),
                                           children = category.children;
@@ -807,7 +899,7 @@
                                        }
                                     }
                               
-                                    // Ä«Å×°í¸®¸¦ Å¬¸¯ÇßÀ» ¶§ È£ÃâµÇ´Â ÇÔ¼öÀÔ´Ï´Ù
+                                    // ì¹´í…Œê³ ë¦¬ë¥¼ í´ë¦­í–ˆì„ ë•Œ í˜¸ì¶œë˜ëŠ” í•¨ìˆ˜ì…ë‹ˆë‹¤
                                     function onClickCategory() {
                                        var id = this.id,
                                           className = this.className;
@@ -825,7 +917,7 @@
                                        }
                                     }
                               
-                                    // Å¬¸¯µÈ Ä«Å×°í¸®¿¡¸¸ Å¬¸¯µÈ ½ºÅ¸ÀÏÀ» Àû¿ëÇÏ´Â ÇÔ¼öÀÔ´Ï´Ù
+                                    // í´ë¦­ëœ ì¹´í…Œê³ ë¦¬ì—ë§Œ í´ë¦­ëœ ìŠ¤íƒ€ì¼ì„ ì ìš©í•˜ëŠ” í•¨ìˆ˜ì…ë‹ˆë‹¤
                                     function changeCategoryClass(el) {
                                        var category = document.getElementById('category'),
                                           children = category.children,
@@ -848,50 +940,50 @@
                               
                               
                               
-                                    // Å°¿öµå·Î Àå¼Ò¸¦ °Ë»öÇÕ´Ï´Ù
+                                    // í‚¤ì›Œë“œë¡œ ì¥ì†Œë¥¼ ê²€ìƒ‰í•©ë‹ˆë‹¤
                                     searchPlaces();
                               
-                                    // Å°¿öµå °Ë»öÀ» ¿äÃ»ÇÏ´Â ÇÔ¼öÀÔ´Ï´Ù
+                                    // í‚¤ì›Œë“œ ê²€ìƒ‰ì„ ìš”ì²­í•˜ëŠ” í•¨ìˆ˜ì…ë‹ˆë‹¤
                                     function searchPlaces() {
                               
                                        var keyword = document.getElementById('keyword').value;
                               
                                        if (!keyword.replace(/^\s+|\s+$/g, '')) {
-                                          alert('Å°¿öµå¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä!');
+                                          alert('í‚¤ì›Œë“œë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”!');
                                           return false;
                                        }
                               
-                                       // Àå¼Ò°Ë»ö °´Ã¼¸¦ ÅëÇØ Å°¿öµå·Î Àå¼Ò°Ë»öÀ» ¿äÃ»ÇÕ´Ï´Ù
+                                       // ì¥ì†Œê²€ìƒ‰ ê°ì²´ë¥¼ í†µí•´ í‚¤ì›Œë“œë¡œ ì¥ì†Œê²€ìƒ‰ì„ ìš”ì²­í•©ë‹ˆë‹¤
                                        ps1.keywordSearch(keyword, placesSearchCB);
                                     }
-                                    // °Ë»ö °á°ú ¸ñ·ÏÀÌ³ª ¸¶Ä¿¸¦ Å¬¸¯ÇßÀ» ¶§ Àå¼Ò¸íÀ» Ç¥ÃâÇÒ ÀÎÆ÷À©µµ¿ì¸¦ »ı¼ºÇÕ´Ï´Ù
+                                    // ê²€ìƒ‰ ê²°ê³¼ ëª©ë¡ì´ë‚˜ ë§ˆì»¤ë¥¼ í´ë¦­í–ˆì„ ë•Œ ì¥ì†Œëª…ì„ í‘œì¶œí•  ì¸í¬ìœˆë„ìš°ë¥¼ ìƒì„±í•©ë‹ˆë‹¤
                                     var infowindow = new kakao.maps.InfoWindow({ zIndex: 1 });
-                              
-                                    // Àå¼Ò°Ë»öÀÌ ¿Ï·áµÆÀ» ¶§ È£ÃâµÇ´Â Äİ¹éÇÔ¼ö ÀÔ´Ï´Ù
+                                    
+                                    // ì¥ì†Œê²€ìƒ‰ì´ ì™„ë£Œëì„ ë•Œ í˜¸ì¶œë˜ëŠ” ì½œë°±í•¨ìˆ˜ ì…ë‹ˆë‹¤
                                     function placesSearchCB(data, status, pagination) {
                                        if (status === kakao.maps.services.Status.OK) {
                               
-                                          // Á¤»óÀûÀ¸·Î °Ë»öÀÌ ¿Ï·áµÆÀ¸¸é
-                                          // °Ë»ö ¸ñ·Ï°ú ¸¶Ä¿¸¦ Ç¥ÃâÇÕ´Ï´Ù
+                                          // ì •ìƒì ìœ¼ë¡œ ê²€ìƒ‰ì´ ì™„ë£Œëìœ¼ë©´
+                                          // ê²€ìƒ‰ ëª©ë¡ê³¼ ë§ˆì»¤ë¥¼ í‘œì¶œí•©ë‹ˆë‹¤
                                           displayPlaces(data);
                               
-                                          // ÆäÀÌÁö ¹øÈ£¸¦ Ç¥ÃâÇÕ´Ï´Ù
+                                          // í˜ì´ì§€ ë²ˆí˜¸ë¥¼ í‘œì¶œí•©ë‹ˆë‹¤
                                           displayPagination(pagination);
                               
                                        } else if (status === kakao.maps.services.Status.ZERO_RESULT) {
                               
-                                          alert('°Ë»ö °á°ú°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.');
+                                          alert('ê²€ìƒ‰ ê²°ê³¼ê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.');
                                           return;
                               
                                        } else if (status === kakao.maps.services.Status.ERROR) {
                               
-                                          alert('°Ë»ö °á°ú Áß ¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.');
+                                          alert('ê²€ìƒ‰ ê²°ê³¼ ì¤‘ ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.');
                                           return;
                               
                                        }
                                     }
                               
-                                    // °Ë»ö °á°ú ¸ñ·Ï°ú ¸¶Ä¿¸¦ Ç¥ÃâÇÏ´Â ÇÔ¼öÀÔ´Ï´Ù
+                                    // ê²€ìƒ‰ ê²°ê³¼ ëª©ë¡ê³¼ ë§ˆì»¤ë¥¼ í‘œì¶œí•˜ëŠ” í•¨ìˆ˜ì…ë‹ˆë‹¤
                                     function displayPlaces(places) {
                               
                                        var listEl = document.getElementById('placesList'),
@@ -900,26 +992,26 @@
                                           bounds = new kakao.maps.LatLngBounds(),
                                           listStr = '';
                               
-                                       // °Ë»ö °á°ú ¸ñ·Ï¿¡ Ãß°¡µÈ Ç×¸ñµéÀ» Á¦°ÅÇÕ´Ï´Ù
+                                       // ê²€ìƒ‰ ê²°ê³¼ ëª©ë¡ì— ì¶”ê°€ëœ í•­ëª©ë“¤ì„ ì œê±°í•©ë‹ˆë‹¤
                                        removeAllChildNods(listEl);
                               
-                                       // Áöµµ¿¡ Ç¥½ÃµÇ°í ÀÖ´Â ¸¶Ä¿¸¦ Á¦°ÅÇÕ´Ï´Ù
+                                       // ì§€ë„ì— í‘œì‹œë˜ê³  ìˆëŠ” ë§ˆì»¤ë¥¼ ì œê±°í•©ë‹ˆë‹¤
                                        removeMarker();
                               
                                        for (var i = 0; i < places.length; i++) {
                               
-                                          // ¸¶Ä¿¸¦ »ı¼ºÇÏ°í Áöµµ¿¡ Ç¥½ÃÇÕ´Ï´Ù
+                                          // ë§ˆì»¤ë¥¼ ìƒì„±í•˜ê³  ì§€ë„ì— í‘œì‹œí•©ë‹ˆë‹¤
                                           var placePosition = new kakao.maps.LatLng(places[i].y, places[i].x),
                                              marker = addMarker(placePosition, i),
-                                             itemEl = getListItem(i, places[i]); // °Ë»ö °á°ú Ç×¸ñ Element¸¦ »ı¼ºÇÕ´Ï´Ù
+                                             itemEl = getListItem(i, places[i]); // ê²€ìƒ‰ ê²°ê³¼ í•­ëª© Elementë¥¼ ìƒì„±í•©ë‹ˆë‹¤
                               
-                                          // °Ë»öµÈ Àå¼Ò À§Ä¡¸¦ ±âÁØÀ¸·Î Áöµµ ¹üÀ§¸¦ Àç¼³Á¤ÇÏ±âÀ§ÇØ
-                                          // LatLngBounds °´Ã¼¿¡ ÁÂÇ¥¸¦ Ãß°¡ÇÕ´Ï´Ù
+                                          // ê²€ìƒ‰ëœ ì¥ì†Œ ìœ„ì¹˜ë¥¼ ê¸°ì¤€ìœ¼ë¡œ ì§€ë„ ë²”ìœ„ë¥¼ ì¬ì„¤ì •í•˜ê¸°ìœ„í•´
+                                          // LatLngBounds ê°ì²´ì— ì¢Œí‘œë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤
                                           bounds.extend(placePosition);
                               
-                                          // ¸¶Ä¿¿Í °Ë»ö°á°ú Ç×¸ñ¿¡ mouseover ÇßÀ»¶§
-                                          // ÇØ´ç Àå¼Ò¿¡ ÀÎÆ÷À©µµ¿ì¿¡ Àå¼Ò¸íÀ» Ç¥½ÃÇÕ´Ï´Ù
-                                          // mouseout ÇßÀ» ¶§´Â ÀÎÆ÷À©µµ¿ì¸¦ ´İ½À´Ï´Ù
+                                          // ë§ˆì»¤ì™€ ê²€ìƒ‰ê²°ê³¼ í•­ëª©ì— mouseover í–ˆì„ë•Œ
+                                          // í•´ë‹¹ ì¥ì†Œì— ì¸í¬ìœˆë„ìš°ì— ì¥ì†Œëª…ì„ í‘œì‹œí•©ë‹ˆë‹¤
+                                          // mouseout í–ˆì„ ë•ŒëŠ” ì¸í¬ìœˆë„ìš°ë¥¼ ë‹«ìŠµë‹ˆë‹¤
                                           (function (marker, title) {
                                              kakao.maps.event.addListener(marker, 'click', function () {
                                                 displayInfowindow(marker, title);
@@ -941,15 +1033,15 @@
                                           fragment.appendChild(itemEl);
                                        }
                               
-                                       // °Ë»ö°á°ú Ç×¸ñµéÀ» °Ë»ö°á°ú ¸ñ·Ï Elemnet¿¡ Ãß°¡ÇÕ´Ï´Ù
+                                       // ê²€ìƒ‰ê²°ê³¼ í•­ëª©ë“¤ì„ ê²€ìƒ‰ê²°ê³¼ ëª©ë¡ Elemnetì— ì¶”ê°€í•©ë‹ˆë‹¤
                                        listEl.appendChild(fragment);
                                        menuEl.scrollTop = 0;
                               
-                                       // °Ë»öµÈ Àå¼Ò À§Ä¡¸¦ ±âÁØÀ¸·Î Áöµµ ¹üÀ§¸¦ Àç¼³Á¤ÇÕ´Ï´Ù
+                                       // ê²€ìƒ‰ëœ ì¥ì†Œ ìœ„ì¹˜ë¥¼ ê¸°ì¤€ìœ¼ë¡œ ì§€ë„ ë²”ìœ„ë¥¼ ì¬ì„¤ì •í•©ë‹ˆë‹¤
                                        map.setBounds(bounds);
                                     }
                               
-                                    // °Ë»ö°á°ú Ç×¸ñÀ» Element·Î ¹İÈ¯ÇÏ´Â ÇÔ¼öÀÔ´Ï´Ù
+                                    // ê²€ìƒ‰ê²°ê³¼ í•­ëª©ì„ Elementë¡œ ë°˜í™˜í•˜ëŠ” í•¨ìˆ˜ì…ë‹ˆë‹¤
                                     function getListItem(index, places) {
                               
                                        var el = document.createElement('li'),
@@ -973,28 +1065,28 @@
                                        return el;
                                     }
                               
-                                    // ¸¶Ä¿¸¦ »ı¼ºÇÏ°í Áöµµ À§¿¡ ¸¶Ä¿¸¦ Ç¥½ÃÇÏ´Â ÇÔ¼öÀÔ´Ï´Ù
+                                    // ë§ˆì»¤ë¥¼ ìƒì„±í•˜ê³  ì§€ë„ ìœ„ì— ë§ˆì»¤ë¥¼ í‘œì‹œí•˜ëŠ” í•¨ìˆ˜ì…ë‹ˆë‹¤
                                     function addMarker(position, idx, title) {
-                                       var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png', // ¸¶Ä¿ ÀÌ¹ÌÁö url, ½ºÇÁ¶óÀÌÆ® ÀÌ¹ÌÁö¸¦ ¾¹´Ï´Ù
-                                          imageSize = new kakao.maps.Size(36, 37),  // ¸¶Ä¿ ÀÌ¹ÌÁöÀÇ Å©±â
+                                       var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png', // ë§ˆì»¤ ì´ë¯¸ì§€ url, ìŠ¤í”„ë¼ì´íŠ¸ ì´ë¯¸ì§€ë¥¼ ì”ë‹ˆë‹¤
+                                          imageSize = new kakao.maps.Size(36, 37),  // ë§ˆì»¤ ì´ë¯¸ì§€ì˜ í¬ê¸°
                                           imgOptions = {
-                                             spriteSize: new kakao.maps.Size(36, 691), // ½ºÇÁ¶óÀÌÆ® ÀÌ¹ÌÁöÀÇ Å©±â
-                                             spriteOrigin: new kakao.maps.Point(0, (idx * 46) + 10), // ½ºÇÁ¶óÀÌÆ® ÀÌ¹ÌÁö Áß »ç¿ëÇÒ ¿µ¿ªÀÇ ÁÂ»ó´Ü ÁÂÇ¥
-                                             offset: new kakao.maps.Point(13, 37) // ¸¶Ä¿ ÁÂÇ¥¿¡ ÀÏÄ¡½ÃÅ³ ÀÌ¹ÌÁö ³»¿¡¼­ÀÇ ÁÂÇ¥
+                                             spriteSize: new kakao.maps.Size(36, 691), // ìŠ¤í”„ë¼ì´íŠ¸ ì´ë¯¸ì§€ì˜ í¬ê¸°
+                                             spriteOrigin: new kakao.maps.Point(0, (idx * 46) + 10), // ìŠ¤í”„ë¼ì´íŠ¸ ì´ë¯¸ì§€ ì¤‘ ì‚¬ìš©í•  ì˜ì—­ì˜ ì¢Œìƒë‹¨ ì¢Œí‘œ
+                                             offset: new kakao.maps.Point(13, 37) // ë§ˆì»¤ ì¢Œí‘œì— ì¼ì¹˜ì‹œí‚¬ ì´ë¯¸ì§€ ë‚´ì—ì„œì˜ ì¢Œí‘œ
                                           },
                                           markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imgOptions),
                                           marker = new kakao.maps.Marker({
-                                             position: position, // ¸¶Ä¿ÀÇ À§Ä¡
+                                             position: position, // ë§ˆì»¤ì˜ ìœ„ì¹˜
                                              image: markerImage
                                           });
                               
-                                       marker.setMap(map); // Áöµµ À§¿¡ ¸¶Ä¿¸¦ Ç¥ÃâÇÕ´Ï´Ù
-                                       markers.push(marker);  // ¹è¿­¿¡ »ı¼ºµÈ ¸¶Ä¿¸¦ Ãß°¡ÇÕ´Ï´Ù
+                                       marker.setMap(map); // ì§€ë„ ìœ„ì— ë§ˆì»¤ë¥¼ í‘œì¶œí•©ë‹ˆë‹¤
+                                       markers.push(marker);  // ë°°ì—´ì— ìƒì„±ëœ ë§ˆì»¤ë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤
                               
                                        return marker;
                                     }
                               
-                                    // Áöµµ À§¿¡ Ç¥½ÃµÇ°í ÀÖ´Â ¸¶Ä¿¸¦ ¸ğµÎ Á¦°ÅÇÕ´Ï´Ù
+                                    // ì§€ë„ ìœ„ì— í‘œì‹œë˜ê³  ìˆëŠ” ë§ˆì»¤ë¥¼ ëª¨ë‘ ì œê±°í•©ë‹ˆë‹¤
                                     function removeMarker() {
                                        for (var i = 0; i < markers.length; i++) {
                                           markers[i].setMap(null);
@@ -1002,13 +1094,13 @@
                                        markers = [];
                                     }
                               
-                                    // °Ë»ö°á°ú ¸ñ·Ï ÇÏ´Ü¿¡ ÆäÀÌÁö¹øÈ£¸¦ Ç¥½Ã´Â ÇÔ¼öÀÔ´Ï´Ù
+                                    // ê²€ìƒ‰ê²°ê³¼ ëª©ë¡ í•˜ë‹¨ì— í˜ì´ì§€ë²ˆí˜¸ë¥¼ í‘œì‹œëŠ” í•¨ìˆ˜ì…ë‹ˆë‹¤
                                     function displayPagination(pagination) {
                                        var paginationEl = document.getElementById('pagination'),
                                           fragment = document.createDocumentFragment(),
                                           i;
                               
-                                       // ±âÁ¸¿¡ Ãß°¡µÈ ÆäÀÌÁö¹øÈ£¸¦ »èÁ¦ÇÕ´Ï´Ù
+                                       // ê¸°ì¡´ì— ì¶”ê°€ëœ í˜ì´ì§€ë²ˆí˜¸ë¥¼ ì‚­ì œí•©ë‹ˆë‹¤
                                        while (paginationEl.hasChildNodes()) {
                                           paginationEl.removeChild(paginationEl.lastChild);
                                        }
@@ -1033,19 +1125,20 @@
                                        paginationEl.appendChild(fragment);
                                     }
                               
-                                    // °Ë»ö°á°ú ¸ñ·Ï ¶Ç´Â ¸¶Ä¿¸¦ Å¬¸¯ÇßÀ» ¶§ È£ÃâµÇ´Â ÇÔ¼öÀÔ´Ï´Ù
-                                    // ÀÎÆ÷À©µµ¿ì¿¡ Àå¼Ò¸íÀ» Ç¥½ÃÇÕ´Ï´Ù
+                                    // ê²€ìƒ‰ê²°ê³¼ ëª©ë¡ ë˜ëŠ” ë§ˆì»¤ë¥¼ í´ë¦­í–ˆì„ ë•Œ í˜¸ì¶œë˜ëŠ” í•¨ìˆ˜ì…ë‹ˆë‹¤
+                                    // ì¸í¬ìœˆë„ìš°ì— ì¥ì†Œëª…ì„ í‘œì‹œí•©ë‹ˆë‹¤
                                     function displayInfowindow(marker, title) {
-                                       var content = '<div style="padding:5px;z-index:1;">' + title + '</div>';
-                              
+                                       var button_test = '<br><a href="#score_test" style="font-family: ë‚˜ëˆ”ê³ ë”•">ìƒì„¸ë³´ê¸°</a>'
+                                        var content = '<div style="padding:5px; z-index:1; width:150px; font-family:ë‚˜ëˆ”ê³ ë”•; font-weight:bold;"><center>' + title + button_test + '</center></div>';
+                                       
                                        infowindow.setContent(content);
                                        infowindow.open(map, marker);
                                        
                                        
                                        $.ajax({
-                                                      type : "get", // ¿äÃ»¹æ½Ä
-                                                      url : "ex01Ajax?title="+title,// ¿äÃ»ÇÒ ¼­¹öÆäÀÌÁö
-                                                      dataType : "json", // ÀÀ´ä¹ŞÀ» ¹æ½Ä
+                                                      type : "get", // ìš”ì²­ë°©ì‹
+                                                      url : "ex01Ajax?title="+title,// ìš”ì²­í•  ì„œë²„í˜ì´ì§€
+                                                      dataType : "json", // ì‘ë‹µë°›ì„ ë°©ì‹
                                                       success : function(data) {
                                                          var title = data.title;
                                                          var ex = data.address+data.tel+data.score;
@@ -1059,18 +1152,29 @@
                                                          $('#co1').text(ex);
                                                          
                                                          if(score == 5.0){
-                                                            $('#img1').attr("src","images/mask2.png");
-                                                         }else{
-                                                            $('#img1').attr("src","images/mask1.png");
-                                                         }
+                                                             $('#img1').attr("style","width:20%");
+                                                             $('#img1').attr("class","progress-bar progress-bar-danger progress-bar-striped active");
+                                                          }else{
+                                                             $('#img1').attr("style","width:80%");
+                                                             $('#img1').attr("class","progress-bar progress-bar-success progress-bar-striped active");
+                                                          }
+                                                          
+                                                          if(score == 5.0){
+                                                              $('#img2').attr("style","width:80%");
+                                                              $('#img2').attr("class","progress-bar progress-bar-success progress-bar-striped active");
+                                                           }else{
+                                                              $('#img2').attr("style","width:20%");
+                                                              $('#img2').attr("class","progress-bar progress-bar-danger progress-bar-striped active");
+                                                           }
                                                          
                                                          
-                                                         // ¼­¹öÆäÀÌÁö¿Í Åë½Å¿¡ ¼º°øÇÑ ÈÄ¿¡ Çàµ¿
+                                                         // ì„œë²„í˜ì´ì§€ì™€ í†µì‹ ì— ì„±ê³µí•œ í›„ì— í–‰ë™
                                                           //alert(data);
                                                          
                                                       },
                                                       error : function() {
-                                                         // ¼­¹öÆäÀÌÁö¿Í Åë½Å¿¡ ½ÇÆĞÇÑ ÈÄ¿¡ Çàµ¿
+                                                         // ì„œë²„í˜ì´ì§€ì™€ í†µì‹ ì— ì‹¤íŒ¨í•œ í›„ì— í–‰ë™
+                                                       
                   
                                                       }
                                                       
@@ -1079,64 +1183,66 @@
                                        
                                     }
                               
-                                    // °Ë»ö°á°ú ¸ñ·ÏÀÇ ÀÚ½Ä Element¸¦ Á¦°ÅÇÏ´Â ÇÔ¼öÀÔ´Ï´Ù
+                                    // ê²€ìƒ‰ê²°ê³¼ ëª©ë¡ì˜ ìì‹ Elementë¥¼ ì œê±°í•˜ëŠ” í•¨ìˆ˜ì…ë‹ˆë‹¤
                                     function removeAllChildNods(el) {
                                        while (el.hasChildNodes()) {
                                           el.removeChild(el.lastChild);
                                        }
                                     }
-                                    // Áöµµ È®´ë Ãà¼Ò¸¦ Á¦¾îÇÒ ¼ö ÀÖ´Â  ÁÜ ÄÁÆ®·ÑÀ» »ı¼ºÇÕ´Ï´Ù
+                                    // ì§€ë„ í™•ëŒ€ ì¶•ì†Œë¥¼ ì œì–´í•  ìˆ˜ ìˆëŠ”  ì¤Œ ì»¨íŠ¸ë¡¤ì„ ìƒì„±í•©ë‹ˆë‹¤
                                     var zoomControl = new kakao.maps.ZoomControl();
                                     map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
                               
-                                    /////////////////// ÇöÀç À§Ä¡ /////////////////////////////////////
+                                    
+                                    
+                                    /////////////////// í˜„ì¬ ìœ„ì¹˜ /////////////////////////////////////
                               
-                                    // HTML5ÀÇ geolocationÀ¸·Î »ç¿ëÇÒ ¼ö ÀÖ´ÂÁö È®ÀÎÇÕ´Ï´Ù 
+                                    // HTML5ì˜ geolocationìœ¼ë¡œ ì‚¬ìš©í•  ìˆ˜ ìˆëŠ”ì§€ í™•ì¸í•©ë‹ˆë‹¤ 
                                     if (navigator.geolocation) {
                               
-                                       // GeoLocationÀ» ÀÌ¿ëÇØ¼­ Á¢¼Ó À§Ä¡¸¦ ¾ò¾î¿É´Ï´Ù
+                                       // GeoLocationì„ ì´ìš©í•´ì„œ ì ‘ì† ìœ„ì¹˜ë¥¼ ì–»ì–´ì˜µë‹ˆë‹¤
                                        navigator.geolocation.getCurrentPosition(function (position) {
                               
-                                          var lat = position.coords.latitude, // À§µµ
-                                             lon = position.coords.longitude; // °æµµ
+                                          var lat = position.coords.latitude, // ìœ„ë„
+                                             lon = position.coords.longitude; // ê²½ë„
                               
-                                          var locPosition = new kakao.maps.LatLng(lat, lon), // ¸¶Ä¿°¡ Ç¥½ÃµÉ À§Ä¡¸¦ geolocationÀ¸·Î ¾ò¾î¿Â ÁÂÇ¥·Î »ı¼ºÇÕ´Ï´Ù
-                                             message = '<div style="padding:5px;">ÇöÀç Á¢¼Ó À§Ä¡</div>'; // ÀÎÆ÷À©µµ¿ì¿¡ Ç¥½ÃµÉ ³»¿ëÀÔ´Ï´Ù
+                                          var locPosition = new kakao.maps.LatLng(lat, lon), // ë§ˆì»¤ê°€ í‘œì‹œë  ìœ„ì¹˜ë¥¼ geolocationìœ¼ë¡œ ì–»ì–´ì˜¨ ì¢Œí‘œë¡œ ìƒì„±í•©ë‹ˆë‹¤
+                                             message = '<div style="padding:5px; width:150px; font-family:ë‚˜ëˆ”ê³ ë”•; font-weight:bold;">í˜„ì¬ ì ‘ì† ìœ„ì¹˜</div>'; // ì¸í¬ìœˆë„ìš°ì— í‘œì‹œë  ë‚´ìš©ì…ë‹ˆë‹¤
                               
-                                          // ¸¶Ä¿¿Í ÀÎÆ÷À©µµ¿ì¸¦ Ç¥½ÃÇÕ´Ï´Ù
+                                          // ë§ˆì»¤ì™€ ì¸í¬ìœˆë„ìš°ë¥¼ í‘œì‹œí•©ë‹ˆë‹¤
                                           displayMarker(locPosition, message);
                               
                                        });
                               
-                                    } else { // HTML5ÀÇ GeoLocationÀ» »ç¿ëÇÒ ¼ö ¾øÀ»¶§ ¸¶Ä¿ Ç¥½Ã À§Ä¡¿Í ÀÎÆ÷À©µµ¿ì ³»¿ëÀ» ¼³Á¤ÇÕ´Ï´Ù
+                                    } else { // HTML5ì˜ GeoLocationì„ ì‚¬ìš©í•  ìˆ˜ ì—†ì„ë•Œ ë§ˆì»¤ í‘œì‹œ ìœ„ì¹˜ì™€ ì¸í¬ìœˆë„ìš° ë‚´ìš©ì„ ì„¤ì •í•©ë‹ˆë‹¤
                               
                                        var locPosition = new kakao.maps.LatLng(35.118267, 126.868662),
-                                          message = 'ÇöÀç À§Ä¡¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.'
+                                          message = 'í˜„ì¬ ìœ„ì¹˜ë¥¼ ì‚¬ìš©í• ìˆ˜ ì—†ìŠµë‹ˆë‹¤.'
                               
                                        displayMarker(locPosition, message);
                                     }
-                                    // Áöµµ¿¡ ¸¶Ä¿¿Í ÀÎÆ÷À©µµ¿ì¸¦ Ç¥½ÃÇÏ´Â ÇÔ¼öÀÔ´Ï´Ù
+                                    // ì§€ë„ì— ë§ˆì»¤ì™€ ì¸í¬ìœˆë„ìš°ë¥¼ í‘œì‹œí•˜ëŠ” í•¨ìˆ˜ì…ë‹ˆë‹¤
                                     function displayMarker(locPosition, message) {
                               
-                                       // ¸¶Ä¿¸¦ »ı¼ºÇÕ´Ï´Ù
+                                       // ë§ˆì»¤ë¥¼ ìƒì„±í•©ë‹ˆë‹¤
                                        var marker2 = new kakao.maps.Marker({
                                           map: map,
                                           position: locPosition
                                        });
                               
-                                       var iwContent = message, // ÀÎÆ÷À©µµ¿ì¿¡ Ç¥½ÃÇÒ ³»¿ë
+                                       var iwContent = message, // ì¸í¬ìœˆë„ìš°ì— í‘œì‹œí•  ë‚´ìš©
                                           iwRemoveable = true;
                               
-                                       // ÀÎÆ÷À©µµ¿ì¸¦ »ı¼ºÇÕ´Ï´Ù
+                                       // ì¸í¬ìœˆë„ìš°ë¥¼ ìƒì„±í•©ë‹ˆë‹¤
                                        var infowindow2 = new kakao.maps.InfoWindow({
                                           content: iwContent,
                                           removable: iwRemoveable
                                        });
                               
-                                       // ÀÎÆ÷À©µµ¿ì¸¦ ¸¶Ä¿À§¿¡ Ç¥½ÃÇÕ´Ï´Ù 
+                                       // ì¸í¬ìœˆë„ìš°ë¥¼ ë§ˆì»¤ìœ„ì— í‘œì‹œí•©ë‹ˆë‹¤ 
                                        infowindow2.open(map, marker2);
                               
-                                       // Áöµµ Áß½ÉÁÂÇ¥¸¦ Á¢¼ÓÀ§Ä¡·Î º¯°æÇÕ´Ï´Ù
+                                       // ì§€ë„ ì¤‘ì‹¬ì¢Œí‘œë¥¼ ì ‘ì†ìœ„ì¹˜ë¡œ ë³€ê²½í•©ë‹ˆë‹¤
                                        map.setCenter(locPosition);
                                     }
                                  </script>
@@ -1147,7 +1253,7 @@
                               
                                  
             </div>                  
-                                 <!-----------------------------------------------map ³¡ ----------------------------->
+                                 <!-----------------------------------------------map ë ----------------------------->
                                  </script>
                                  
                            </div>
@@ -1155,7 +1261,7 @@
                               
                            
                         </section>
-                        <div>
+                        <div id="score_test">
                            <div style="background-color: #8EA3CA; width: 1000px; height: 50px">
                               <header>
                                  <h5  style="padding: 0px 10px 1px;
@@ -1164,17 +1270,50 @@
                                  border-left-style: solid;
                                  border-left-color: slateblue;
                                  font-size: 24pt; color: #fff;
-                                 font-family: '³ª´®°íµñ';
+                                 font-family: 'ë‚˜ëˆ”ê³ ë”•';
                                  border-bottom-width: 1px;
                                  letter-spacing: -0.07em;
-                                 background-color: slateblue(250,250,250);">¾ÈÀüÁ¡¼ö</h5>
+                                 background-color: slateblue(250,250,250);">ì•ˆì „ì ìˆ˜</h5>
                               </header>
                            </div>
-                              <!-- ¸¶½ºÅ© Âø¿ë ºñÀ² °ªÀ¸·Î ÀÌ¹ÌÁö°¡ »óÈ²¿¡ ¸Â°Ô ¼³Á¤ÇØ¾ßÇÔ 1 : ÁÁÀ½ 2 : Áß°£ 3 : ³ª»İ-->
-                              <!-- <img src="images/¸¶½ºÅ©1.png" width="130px" height="130px" alt="" /><br>
-                              <h3 style="color: #000; font-family: THE½ºÇÇµå;">¸¶½ºÅ© Á¡¼ö</h3> -->
-                              <section class="demo-3" style="font-family: ³ª´®°íµñ;">
-                                 <div class="grid">
+                              <section class="demo-3" style="font-family: ë‚˜ëˆ”ê³ ë”•;">
+                                 <div class="grid" style="float: left;">
+                                 
+                                 <!-- ë§¤ì¥ ì •ë³´ ---------------------------------------------------->
+                                 <div class="box" style="color: #000000; font-size: 30px">   
+                                      <svg xmlns="http://www.w3.org/2000/svg" width=100%" height="100%">
+                                        <line class="top" x1="0" y1="0" x2="900" y2="0"/>
+                                        <line class="left" x1="0" y1="460" x2="0" y2="-920"/>
+                                        <line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
+                                        <line class="right" x1="300" y1="0" x2="300" y2="1380"/>
+                                      </svg>
+                                      <!-- <img src="images/food.png" width="150px" height="200px" style="padding: 10px;"> -->
+                                      <a style="font-size: 25px; color: #000">ë§ˆìŠ¤í¬ ì ìˆ˜</a>
+                                      <div align="left">
+                                      <div style="float: left; width: 100px; height: 30px;">
+                                           <span style="font-size: 15px; margin-right: 0px;">ì‚¬ì—…ì ëª… : &nbsp</span>
+                                      </div>
+                                      
+                                      
+                                      <div style="float: left; width: 100px; height: 30px;">
+                                           <span id="co"></span>
+                                      </div>
+                                      <div style="float: left;  width: 100px; height: 30px;">
+                                          <span style="font-size: 15px; margin-right: 0px;">ë²ˆí˜¸ : &nbsp</span>
+                                      </div>
+                                      <div style="float: left; width: 100px; height: 30px;">
+                                          <span id="co1"></span>
+                                      </div>
+                                      <div style="float: left;width: 100px; height: 30px;">
+                                          <span style="font-size: 15px">ë°›ì•„ì˜¬ ê°’ : &nbsp</span>
+                                      </div>
+                                       </div>
+                                    </div>
+                                 
+                                 
+                                 
+                                 
+                                 <!-- ë§ˆìŠ¤í¬ ì ìˆ˜ -->
                                     <div class="box" style="color: #000000; font-size: 30px">   
                                       <svg xmlns="http://www.w3.org/2000/svg" width=100%" height="100%">
                                         <line class="top" x1="0" y1="0" x2="900" y2="0"/>
@@ -1182,13 +1321,40 @@
                                         <line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
                                         <line class="right" x1="300" y1="0" x2="300" y2="1380"/>
                                       </svg>
-                                      <img id="img1" src="images/loading.png" width="200px" height="200px" style="padding: 10px;"><a style="font-size: 25px; color: #000">¸¶½ºÅ© Á¡¼ö</a>
+                                      <!-- <img id="img1" src="images/loading.png" width="150px" height="200px" style="padding: 10px;"> -->
+                                      <!-- <progress id="img1" class="current-roll2" value="10" max="100"></progress> -->
+                                      
+                                      <div class="progress" style="height: 25px;">
+    								  	<div id="img1" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"  style="width:80%;">
+      									ì¢‹ìŒ
+    									</div>
+  									  </div>
+                                      
+                                      <a style="font-size: 25px; color: #000">ë§ˆìŠ¤í¬ ì ìˆ˜</a>
+                                      
+                                     
                                       <div align="left">
-                                           <span style="font-size: 15px">¹Ş¾Æ¿Ã °ª : <span id="co"></span></span>
-                                          <span style="font-size: 15px">¹Ş¾Æ¿Ã °ª : <span id="co1"></span></span>
-                                          <span style="font-size: 15px">¹Ş¾Æ¿Ã °ª : </span>
+                                      <div style="float: left; width: 100px; height: 30px;">
+                                           <span style="font-size: 15px; margin-right: 0px;">ì‚¬ì—…ì ëª… : &nbsp</span>
+                                      </div>
+                                      <div style="float: left; width: 100px; height: 30px;">
+                                           <span id="co"></span>
+                                      </div>
+                                      <div style="float: left;  width: 100px; height: 30px;">
+                                          <span style="font-size: 15px; margin-right: 0px;">ë²ˆí˜¸ : &nbsp</span>
+                                      </div>
+                                      <div style="float: left; width: 100px; height: 30px;">
+                                          <span id="co1"></span>
+                                      </div>
+                                      <div style="float: left;width: 100px; height: 30px;">
+                                          <span style="font-size: 15px">ë°›ì•„ì˜¬ ê°’ : &nbsp</span>
+                                      </div>
                                        </div>
                                     </div>
+                                    
+                                    
+                                    
+                                    <!-- ë°©ì—­ ì ìˆ˜ -->
                                     <div class="box" style="color: #000000; font-size: 30px">
                                       <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
                                         <line class="top" x1="0" y1="0" x2="900" y2="0"/>
@@ -1196,51 +1362,101 @@
                                         <line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
                                         <line class="right" x1="300" y1="0" x2="300" y2="1380"/>
                                       </svg>
-                                      <img src="images/loading.png" width="200px" height="200px" style="padding: 10px;"><a style="font-size: 25px; color: #000">¹æ¿ª À¯¹«</a>
-                                      <div align="left">
-                                       <span id="co" style="font-size: 15px">¹Ş¾Æ¿Ã °ª : </span>
-                                       <span id="co" style="font-size: 15px">¹Ş¾Æ¿Ã °ª : </span>
-                                       <span id="co" style="font-size: 15px">¹Ş¾Æ¿Ã °ª : </span>
-                                       </div>
-                                    </div>
-                                  
+                                      <!-- <img src="images/loading.png" width="150px" height="200px" style="padding: 10px;"> -->
+                                      <!-- <progress id="img2" class="current-roll" value="20" max="100"></progress> -->
+                                      
+                                      <div class="progress" style="height: 25px;">
+    								  	<div id="img2" class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"  style="width:20%;">
+      									ë‚˜ì¨
+    									</div>
+  									  </div>
+                                      
+                                      <a style="font-size: 25px; color: #000">ë°©ì—­ ìœ ë¬´</a>
+                                     <div align="left">
+                                      <div style="float: left; width: 100px; height: 30px;">
+                                           <span style="font-size: 15px; margin-right: 0px;">ë°›ì•„ì˜¬ ê°’ : &nbsp</span>
+                                      </div>
+                                      <div style="float: left; width: 100px; height: 30px;">
+                                           <span id="#"></span>
+                                      </div>
+                                      <div style="float: left;  width: 100px; height: 30px;">
+                                          <span style="font-size: 15px; margin-right: 0px;">ë°›ì•„ì˜¬ ê°’ : &nbsp</span>
+                                      </div>
+                                      <div style="float: left; width: 100px; height: 30px;">
+                                          <span id="#"></span>
+                                      </div>
+                                      <div style="float: left;width: 100px; height: 30px;">
+                                          <span style="font-size: 15px">ë°›ì•„ì˜¬ ê°’ : &nbsp</span>
+                                      </div>
+                                     </div>
+                                   </div>
                                  </div><!-- /grid -->
-                               </section>
+                                      
+                                 	 
+                               </section><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                               
+                               <div>
+		                           <div style="background-color: #8EA3CA; width: 1000px; height: 50px">
+		                              <header>
+		                                 <h5  style="padding: 0px 10px 1px;
+		                                 margin: 10px 0px 5px;
+		                                 border-left-width: 5px;
+		                                 border-left-style: solid;
+		                                 border-left-color: slateblue;
+		                                 font-size: 24pt; color: #fff;
+		                                 font-family: 'ë‚˜ëˆ”ê³ ë”•';
+		                                 border-bottom-width: 1px;
+		                                 letter-spacing: -0.07em;
+		                                 background-color: slateblue(250,250,250);">ë™ì˜ìƒ</h5>
+		                              </header>
+                         		  </div>
+                         		  	<h3 style="font-family: ë‚˜ëˆ”ê³ ë”•">ë™ì˜ìƒì„ ì¬ìƒ í• êº¼ì•¼</h3>
+                         		  	
+                         		  	<img src="images/image_test.png" style="width: 800px; height: 500px;"><br><br><br><br><br><br>
+                         		  	
+                         		  	
+                         		  	
+                         		  	
+                                </div>	   
                                
                               
 
 
 
-                        </div><br><br><br>
+                        </div>
                            
                                  
                            
                               
 
 
+
                         
-                        <!-- popup Ã¢!-->
-                        <!-- <button onclick="window.open('CSS3FluidParallaxSlideshow/Scroll.html','window_popup','width=800,height=450,top=100,left=400,location=no,status=no,scrollbars=yes, resizable=yes');" style="color: #000; box-shadow: inset 0 0 0 2px #000000;" id="test_but">»ó¼¼º¸±â</button> -->
-                        <!--ÆäÀÌÁö ÀÌµ¿À» À§ÇÑ ¹öÆ° -->
+                        <!-- popup ì°½!-->
+                        <!-- <button onclick="window.open('CSS3FluidParallaxSlideshow/Scroll.html','window_popup','width=800,height=450,top=100,left=400,location=no,status=no,scrollbars=yes, resizable=yes');" style="color: #000; box-shadow: inset 0 0 0 2px #000000;" id="test_but">ìƒì„¸ë³´ê¸°</button> -->
+                        <!--í˜ì´ì§€ ì´ë™ì„ ìœ„í•œ ë²„íŠ¼ -->
                            
                          
-                        <!---------------------------------------MAP ³¡ ------------------------------------------->
+                        <!---------------------------------------MAP ë ------------------------------------------->
                          
 
                      
 
                      <!-- Section -->
                   <div>
-                        <header class="major" >
-                           
-                           
+                        <header class="major" > 
                         </header>
                      </div>                         
 
-                  </div>
-               </div>   
-
-            <!-- Sidebar -->
+                  
+               </div> 
+               			
+                           
+                           
+                 	  </div>
+               
+               
+                             <!-- Sidebar -->
          
                <!--style="margin-top: 145px;"-->
                <div id="sidebar">
@@ -1261,7 +1477,7 @@
                      <!-- Section -->
                         <section style="margin: 0px;">
                            <header class="major">
-                              <h3 style="font-family: ³ª´®°íµñ; font-size: 25pt;">½Ç½Ã°£ ÄÚ·Î³ª »óÈ²</h3>
+                              <h3 style="text-align:center; font-family: ë‚˜ëˆ”ê³ ë”•; font-size: 25pt; color: #000; font-weight:bold;">ì‹¤ì‹œê°„ ì½”ë¡œë‚˜ ìƒí™©</h3>
                            </header>
                            <div class="mini-posts">
                         <article>
@@ -1274,82 +1490,96 @@
                                     }
                                  %>
                            
-                              <div style="border: 5px solid #fff; font-family: ³ª´®°íµñ">
+                              <div style="border: 5px solid #fff; font-family: ë‚˜ëˆ”ê³ ë”•">
                                  
+                                 <div style="background-color: #8EA3CA;">
+                                    <span style="font-size: 18pt; font-family: ë‚˜ëˆ”ê³ ë”•; font-weight: bold;  color: #fff;">í™•ì§„í™˜ì</span>
+                                 </div> 
+                                 <div style="color: #000">
                                  <div style="background-color: #8EA3CA; opacity: 0.8;">
-                                    <span style="font-size: 15pt; font-family: ³ª´®°íµñ">È®ÁøÈ¯ÀÚ</span>
-                                 </div>
-                                 <div>
-                                 <div style="background-color: #8EA3CA; opacity: 0.8;">
-                                    <span style="font-size: 15px; font-family: ³ª´®°íµñ"><%=list.get(0).getText()%>¸í</span>
+                                    <span style="font-size: 15pt; font-family: ë‚˜ëˆ”ê³ ë”•; font-weight: bold; color: #000"><%=list.get(0).getText()%>ëª…</span>
                                  </div><br>
-                                 <div align="left">
-                                    <span>Ä¡·áÁß : <%=list.get(1).getText()%>¸í</span>
+                                 <div style="font-size: 15px; font-weight: bold;">
+                                 <div align="center">
+                                    <span>ì¹˜ë£Œì¤‘ : &nbsp<%=list.get(1).getText()%>ëª…</span>
                                  </div>
-                                 <div align="left">
-                                    <span>°İ¸®ÇØÁ¦ : <%=list.get(2).getText()%>¸í</span>
+                                 <div align="center">
+                                    <span>ê²©ë¦¬í•´ì œ : &nbsp<%=list.get(2).getText()%>ëª…</span>
                                  </div>
-                                 <div align="left">
-                                    <span>»ç¸Á : <%=list.get(3).getText()%>¸í</span>
+                                 <div align="center">
+                                    <span>ì‚¬ë§ : &nbsp<%=list.get(3).getText()%>ëª…</span>
+                                 </div>
                                  </div>
                                  </div>
                               </div><br>
                               
                               
-                              <div style="border: 5px solid #fff; font-family: ³ª´®°íµñ">
+                              <div style="border: 5px solid #fff; font-family: ë‚˜ëˆ”ê³ ë”•">
                                  
-                                 <div style="background-color: #8EA3CA; opacity: 0.8;">
-                                    <span style="font-size: 15pt; font-family: ³ª´®°íµñ">°Ë»çÇöÈ²</span>
+                                 <div style="background-color: #8EA3CA;">
+                                    <span style="font-size: 18pt; font-family: ë‚˜ëˆ”ê³ ë”•; font-weight: bold; color: #fff">ê²€ì‚¬í˜„í™©</span>
                                  </div>
+                                 <div style="color: #000">
                                  <div style="background-color: #8EA3CA; opacity: 0.8;">
-                                    <span style="font-size: 15px; font-family: ³ª´®°íµñ"><%=list.get(4).getText()%>¸í</span>
+                                    <span style="font-size: 15pt; font-family: ë‚˜ëˆ”ê³ ë”•; font-weight: bold; color: #000"><%=list.get(4).getText()%>ëª…</span>
                                  </div><br>
-                                 <div align="left">
-                                    <span>¾ç¼º : <%=list.get(5).getText()%>¸í</span> 
+                                 <div style="font-size: 15px; font-weight: bold;">
+                                 <div align="center">
+                                    <span>ì–‘ì„± : &nbsp<%=list.get(5).getText()%>ëª…</span> 
                                  </div>
-                                 <div align="left">
-                                    <span>À½¼º : <%=list.get(6).getText()%>¸í</span>
+                                 <div align="center">
+                                    <span>ìŒì„± : &nbsp<%=list.get(6).getText()%>ëª…</span>
                                  </div>
-                                 <div align="left">
-                                    <span>°Ë»çÁß : <%=list.get(7).getText()%>¸í</span>
+                                 <div align="center">
+                                    <span>ê²€ì‚¬ì¤‘ : &nbsp<%=list.get(7).getText()%>ëª…</span>
+                                 </div>
+                                 </div>
                                  </div>
                               </div><br>      
                                  
-                              <div style="border: 5px solid #fff; font-family: ³ª´®°íµñ">
+                              <div style="border: 5px solid #fff; font-family: ë‚˜ëˆ”ê³ ë”•">
                                  
-                                 <div style="background-color: #8EA3CA; opacity: 0.8;">
-                                    <span style="font-size: 15pt; font-family: ³ª´®°íµñ">Á¢ÃËÀÚ</span>
+                                 <div style="background-color: #8EA3CA;">
+                                    <span style="font-size: 18pt; font-family: ë‚˜ëˆ”ê³ ë”•; font-weight: bold; color: #fff">ì ‘ì´‰ì</span>
                                  </div>
                                  <div style="background-color: #8EA3CA; opacity: 0.8;">
-                                    <span style="font-size: 15px; font-family: ³ª´®°íµñ"><%=list.get(8).getText()%>¸í</span>
+                                    <span style="font-size: 15pt; font-family: ë‚˜ëˆ”ê³ ë”•; font-weight: bold; color: #000"><%=list.get(8).getText()%>ëª…</span>
                                  </div><br>
-                                 <div align="left">
-                                    <span>°İ¸®Áß : <%=list.get(9).getText()%>¸í</span>
+                                 <div style="font-size: 15px; font-weight: bold;">
+                                 <div style="color: #000"> 
+                                 <div align="center">
+                                    <span>ê²©ë¦¬ì¤‘ : &nbsp<%=list.get(9).getText()%>ëª…</span>
                                  </div>
-                                 <div align="left">
-                                    <span>°İ¸®ÇØÁ¦ : <%=list.get(10).getText()%>¸í</span>
+                                 <div align="center">
+                                    <span>ê²©ë¦¬í•´ì œ : &nbsp<%=list.get(10).getText()%>ëª…</span>
+                                 </div>
+                                 </div>
                                  </div>
                               </div><br>
                               
-                              <div style="border: 5px solid #fff; font-family: ³ª´®°íµñ">
+                              <div style="border: 5px solid #fff; font-family: ë‚˜ëˆ”ê³ ë”•">
                                  
-                                 <div style="background-color: #8EA3CA; opacity: 0.8;">
-                                    <span style="font-size: 15pt; font-family: ³ª´®°íµñ">ÀÚÄ¡±¸º° ¹ß»ı ÇöÈ²</span>
+                                 <div style="background-color: #8EA3CA;">
+                                    <span style="font-size: 18pt; font-family: ë‚˜ëˆ”ê³ ë”•; font-weight: bold; color: #fff">ìì¹˜êµ¬ë³„ ë°œìƒ í˜„í™©</span>
                                  </div><br>
-                                 <div align="left">
-                                    <span>µ¿±¸ : <%=list.get(11).getText()%>¸í</span>
+                                 <div style="font-size: 15px; font-weight: bold;">
+                                 <div style="color: #000">
+                                 <div align="center">
+                                    <span>ë™êµ¬ : &nbsp<%=list.get(11).getText()%>ëª…</span>
                                  </div>
-                                 <div align="left">
-                                    <span>¼­±¸ : <%=list.get(12).getText()%>¸í</span>
+                                 <div align="center">
+                                    <span>ì„œêµ¬ : &nbsp<%=list.get(12).getText()%>ëª…</span>
                                  </div>
-                                 <div align="left">
-                                    <span>³²±¸ : <%=list.get(13).getText()%>¸í</span>
+                                 <div align="center">
+                                    <span>ë‚¨êµ¬ : &nbsp<%=list.get(13).getText()%>ëª…</span>
                                  </div>
-                                 <div align="left">
-                                    <span>ºÏ±¸ : <%=list.get(14).getText()%>¸í</span>
+                                 <div align="center">
+                                    <span>ë¶êµ¬ : &nbsp<%=list.get(14).getText()%>ëª…</span>
                                  </div>
-                                 <div align="left">
-                                    <span>±¤»ê±¸ : <%=list.get(15).getText()%>¸í</span>
+                                 <div align="center">
+                                    <span>ê´‘ì‚°êµ¬ : &nbsp<%=list.get(15).getText()%>ëª…</span>
+                                 </div>
+                                 </div>
                                  </div>
                               </div>   
                                  
@@ -1358,17 +1588,17 @@
                               
                               <article>
                                  <header class="major">
-                                    <h3 align="center" style="font-family: ³ª´®°íµñ; font-size: 25pt;">±¤ÁÖ ¼±º° Áø·á¼Ò</h3>
+                                    <h3 style="text-align:center; font-family:ë‚˜ëˆ”ê³ ë”•; font-weight:bold; font-size: 25pt;">ê´‘ì£¼ ì„ ë³„ ì§„ë£Œì†Œ</h3>
                                  </header>
                                  <a href="https://www.gwangju.go.kr/c19/c19/contentsView.do?pageId=coronagj6" target="blank" class="image"><img src="images/covid.jpg" alt="" align="middle" /></a>
-                                 <p style="font-family: GmarketSansLight;">±¤ÁÖ±¤¿ª½Ã ¼±º°Áø·á¼Ò ÆäÀÌÁö ÀÔ´Ï´Ù.</p>
+                                 <p style="font-family: ë‚˜ëˆ”ê³ ë”•;">ê´‘ì£¼ê´‘ì—­ì‹œ ì„ ë³„ì§„ë£Œì†Œ í˜ì´ì§€ ì…ë‹ˆë‹¤.</p>
                               </article>
                               <!-- <article>
                                  <header class="major">
-                                    <strong style="font-family: THE½ºÇÇµå; font-size: 30px;">ÄÚ·Î³ª ¸Ê</strong><br><br>
+                                    <strong style="font-family: THEìŠ¤í”¼ë“œ; font-size: 30px;">ì½”ë¡œë‚˜ ë§µ</strong><br><br>
                                  </header>
-                                 <a href="https://coronamap.site/" class="image"><img src="images/ÄÚ·Î³ª ¸Ê.png" alt="" /></a>
-                                 <p style="font-family: Cafe24Ohsquareair;">±¤ÁÖ±¤¿ª½Ã ÄÚ·Î³ª ¸Ê ÆäÀÌÁö ÀÔ´Ï´Ù.</p>
+                                 <a href="https://coronamap.site/" class="image"><img src="images/ì½”ë¡œë‚˜ ë§µ.png" alt="" /></a>
+                                 <p style="font-family: Cafe24Ohsquareair;">ê´‘ì£¼ê´‘ì—­ì‹œ ì½”ë¡œë‚˜ ë§µ í˜ì´ì§€ ì…ë‹ˆë‹¤.</p>
                               </article> -->
                            </div>
                            <!-- <ul class="actions">
@@ -1377,17 +1607,17 @@
                         </section>
 
                      <!-- Section -->
-                        <section style="font-family: ³ª´®°íµñ">
+                        <section style="font-family: ë‚˜ëˆ”ê³ ë”•">
                            <header class="major">
                               <h2>COMPANY</h2>
                            </header>
-                           <p>CCTV¸¦ ÅëÇØ  ¸¶½ºÅ© Âø¿ë¿©ºÎ ºñÀ², Âø¿ë½Ã°£À» ºĞ¼®°ú ÀÌ¿ëÀÚ ¼öÀ» ºĞ¼®ÇÏ¿© 
-                              Àå¼Ò ¹× °¡°ÔÀÇ ¾ÈÀü¼º Æò°¡ ÈÄ Á¦°øÇÕ´Ï´Ù. Á»´õ ½±°í Æí¸®ÇÏ°Ô º¸´Â ÆäÀÌÁö ÀÔ´Ï´Ù.</p>
+                           <p>CCTVë¥¼ í†µí•´  ë§ˆìŠ¤í¬ ì°©ìš©ì—¬ë¶€ ë¹„ìœ¨, ì°©ìš©ì‹œê°„ì„ ë¶„ì„ê³¼ ì´ìš©ì ìˆ˜ì„ ë¶„ì„í•˜ì—¬ 
+                              ì¥ì†Œ ë° ê°€ê²Œì˜ ì•ˆì „ì„± í‰ê°€ í›„ ì œê³µí•©ë‹ˆë‹¤. ì¢€ë” ì‰½ê³  í¸ë¦¬í•˜ê²Œ ë³´ëŠ” í˜ì´ì§€ ì…ë‹ˆë‹¤.</p>
                            <ul class="contact">
                               <li class="icon solid fa-envelope"><a href="#">post_corona.co.kr</a></li>
                               <li class="icon solid fa-phone">(062) 655-3508</li>
-                              <li class="icon solid fa-home">±¤ÁÖ±¤¿ª½Ã µ¿±¸ Áß¾Ó·Î ½Å³ªºôµù 7Ãş ´ëÇ¥ÀÚ : ÀÌ½ÂÈ¯  / 
-                               »ç¾÷ÀÚµî·Ï¹øÈ£ : 178-82-000658254<br /></li>
+                              <li class="icon solid fa-home">ê´‘ì£¼ê´‘ì—­ì‹œ ë™êµ¬ ì¤‘ì•™ë¡œ ì‹ ë‚˜ë¹Œë”© 7ì¸µ ëŒ€í‘œì : ì´ìŠ¹í™˜  / 
+                               ì‚¬ì—…ìë“±ë¡ë²ˆí˜¸ : 178-82-000658254<br /></li>
                            </ul>
                         </section>
 

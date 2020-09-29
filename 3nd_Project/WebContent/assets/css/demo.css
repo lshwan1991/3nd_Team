@@ -15,6 +15,7 @@
 .clearfix:after { clear: both; }
 
 body {
+<<<<<<< HEAD
    
    color: #000;
    background-color: #fff;
@@ -22,18 +23,37 @@ body {
    /* font-size: 100%; */
    /* line-height: 1.25;
    font-family: 'Lato', Arial, sans-serif; */
+=======
+	
+	color: #000;
+	background-color: #fff;
+	
+	/* font-size: 100%; */
+	/* line-height: 1.25;
+	font-family: 'Lato', Arial, sans-serif; */
+>>>>>>> branch 'ran' of https://github.com/lshwan1991/3nd_Team.git
 }
 
 h3 {
+<<<<<<< HEAD
    /* margin: 20px; */
    font-family: "맑은고딕";
    color: #616161;
    text-transform: uppercase;
    letter-spacing: -2px;
    text-align: left;
+=======
+	/* margin: 20px; */
+	font-family: "�������";
+	color: #616161;
+	text-transform: uppercase;
+	letter-spacing: -2px;
+	text-align: left;
+>>>>>>> branch 'ran' of https://github.com/lshwan1991/3nd_Team.git
   }
   
   h3 span {
+<<<<<<< HEAD
    display: block;
    margin: 11px 0 17px 0;
    font-size: 50px;
@@ -41,6 +61,15 @@ h3 {
    color: #616161;
    text-shadow: 0 13.36px 8.896px #9E9E9E -2px 1px #E0E0E0;
    letter-spacing: -4px;
+=======
+	display: block;
+	margin: 11px 0 17px 0;
+	font-size: 50px;
+	line-height: 80px;
+	color: #616161;
+	text-shadow: 0 13.36px 8.896px #9E9E9E -2px 1px #E0E0E0;
+	letter-spacing: -4px;
+>>>>>>> branch 'ran' of https://github.com/lshwan1991/3nd_Team.git
   }
 
 a {
