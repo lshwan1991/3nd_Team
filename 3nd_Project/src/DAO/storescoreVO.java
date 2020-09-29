@@ -1,0 +1,82 @@
+package DAO;
+
+public class storescoreVO {
+	String STORE_NAME;
+	int STORE_MASK1;
+	int STORE_MASK2;
+	int STORE_MASK3;
+	int STORE_PREVENTION1;
+	int STORE_PREVENTION2;
+	int STORE_PREVENTION3;
+	
+	public storescoreVO(String sTORE_NAME, int sTORE_MASK1, int sTORE_MASK2, int sTORE_MASK3, int sTORE_PREVENTION1,
+			int sTORE_PREVENTION2, int sTORE_PREVENTION3) {
+		super();
+		STORE_NAME = sTORE_NAME;
+		STORE_MASK1 = sTORE_MASK1;
+		STORE_MASK2 = sTORE_MASK2;
+		STORE_MASK3 = sTORE_MASK3;
+		STORE_PREVENTION1 = sTORE_PREVENTION1;
+		STORE_PREVENTION2 = sTORE_PREVENTION2;
+		STORE_PREVENTION3 = sTORE_PREVENTION3;
+	}
+
+	public String getSTORE_NAME() {
+		return STORE_NAME;
+	}
+
+	public void setSTORE_NAME(String sTORE_NAME) {
+		STORE_NAME = sTORE_NAME;
+	}
+
+	public int getSTORE_MASK1() {
+		return STORE_MASK1;
+	}
+
+	public void setSTORE_MASK1(int sTORE_MASK1) {
+		STORE_MASK1 = sTORE_MASK1;
+	}
+
+	public int getSTORE_MASK2() {
+		return STORE_MASK2;
+	}
+
+	public void setSTORE_MASK2(int sTORE_MASK2) {
+		STORE_MASK2 = sTORE_MASK2;
+	}
+
+	public int getSTORE_MASK3() {
+		return STORE_MASK3;
+	}
+
+	public void setSTORE_MASK3(int sTORE_MASK3) {
+		STORE_MASK3 = sTORE_MASK3;
+	}
+
+	public int getSTORE_PREVENTION1() {
+		return STORE_PREVENTION1;
+	}
+
+	public void setSTORE_PREVENTION1(int sTORE_PREVENTION1) {
+		STORE_PREVENTION1 = sTORE_PREVENTION1;
+	}
+
+	public int getSTORE_PREVENTION2() {
+		return STORE_PREVENTION2;
+	}
+
+	public void setSTORE_PREVENTION2(int sTORE_PREVENTION2) {
+		STORE_PREVENTION2 = sTORE_PREVENTION2;
+	}
+
+	public int getSTORE_PREVENTION3() {
+		return STORE_PREVENTION3;
+	}
+
+	public void setSTORE_PREVENTION3(int sTORE_PREVENTION3) {
+		STORE_PREVENTION3 = sTORE_PREVENTION3;
+	}
+	
+	
+	
+}

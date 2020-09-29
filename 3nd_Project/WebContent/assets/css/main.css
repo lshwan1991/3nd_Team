@@ -1,9 +1,9 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700");
 /*
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+   Editorial by HTML5 UP
+   html5up.net | @ajlkn
+   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -65,18 +65,18 @@ input, select, textarea {
 
 /*RESET*/
 *{margin:0; padding:0;}
-	ul,ol,dl{list-style:none;}
-	img , video{max-width:100%; border:0;}
-	a{text-decoration:none; color:#333; display:inline-block;}
-	table{border-collapse:collapse; border-spacing:0;}
-	input , select {vertical-align:middle;}
-	html{height:100%;}
-	label{cursor:pointer;}
-	i , em , address{font-style:normal; font-weight:normal;}
-	
-/*½½¶óÀÌµå ¸öÅë */
+   ul,ol,dl{list-style:none;}
+   img , video{max-width:100%; border:0;}
+   a{text-decoration:none; color:#333; display:inline-block;}
+   table{border-collapse:collapse; border-spacing:0;}
+   input , select {vertical-align:middle;}
+   html{height:100%;}
+   label{cursor:pointer;}
+   i , em , address{font-style:normal; font-weight:normal;}
+   
+/*ìŠ¬ë¼ì´ë“œ ëª¸í†µ */
 
-.slide{background : gray; text-align:center; position:relative; width: 700px; margin: 0 auto; display: block; height:400px; left: 10px;}
+.slide{background : gray; text-align:center; position:relative; width: 1000px; margin: 0 auto; display: block; height:500px; left: 10px;}
 
 .slide_ul{display: block;}
 .slide_ul>li{position:absolute; top:0; left:0; list-style:none;z-index:10; display: block;}
@@ -86,7 +86,7 @@ li{list-style: none;}
 .show{display:block;}
 
 
-/* ÇÏ´Ü µ¿±×¶ó¹Ì ¹öÆ° CSS*/
+/* í•˜ë‹¨ ë™ê·¸ë¼ë¯¸ ë²„íŠ¼ CSS*/
 .slide_btn>li{float: left; margin:0 5px 5px 0;}
 .slide_btn>li>a{display:block; width: 14px; height:14px; background: url(../images/spr.png) -24px -125px; text-indent: -999em; }
 .slide_btn>li>a.active{background-position: 0 -126px;}
@@ -164,7 +164,7 @@ a {
   text-decoration: none; }
   a:hover {
     border-bottom-color: #f56a6a;
-    color: #f56a6a !important; }
+    color: #f56a6a; }
     a:hover strong {
       color: inherit; }
 
@@ -1045,8 +1045,7 @@ header p {
   margin-top: -0.5em;
   text-transform: uppercase; }
 
-/* header.major > :last-child {
-  border-bottom: solid 3px #000; */
+
   
   
   padding: 0 0.75em 0.5em 0; }
@@ -1193,8 +1192,8 @@ input[type="radio"] {
     content: '\f00c'; }
   input[type="checkbox"]:focus + label:before,
   input[type="radio"]:focus + label:before {
-    border-color: #f56a6a;
-    box-shadow: 0 0 0 1px #f56a6a; }
+    border-color: #8EA3CA;
+    box-shadow: 0 0 0 1px #8EA3CA; }
 
 input[type="checkbox"] + label:before {
   border-radius: 0.375em; }
@@ -1424,7 +1423,7 @@ ul.contact {
       font-family: 'Font Awesome 5 Free';
       font-weight: 400; }
     ul.contact li:before {
-      color: #f56a6a;
+      color : #8EA3CA;
       display: inline-block;
       font-size: 1.5em;
       height: 1.125em;
@@ -1543,8 +1542,8 @@ button,
   background-color: transparent;
   border-radius: 0.375em;
   border: 0;
-  box-shadow: inset 0 0 0 2px #f56a6a;
-  color: #f56a6a;
+  box-shadow: inset 0 0 0 2px #000;
+  color: #000;
   cursor: pointer;
   display: inline-block;
   font-family: "Roboto Slab", serif;
@@ -1690,7 +1689,7 @@ button,
       text-align: center;
       width: 10em; }
       .features article .icon:before {
-        color: #f56a6a;
+        color: #8EA3CA;
         font-size: 2.75rem;
         position: relative;
         top: 0.05em; }
@@ -2063,7 +2062,8 @@ button,
         text-indent: 5em;
         width: 5em; }
         #sidebar .toggle:before {
-          font-size: 1.5rem; }
+          font-size: 1.5rem;
+          color: #000; }
       #sidebar.inactive {
         margin-left: -24em; } }
   @media screen and (max-width: 1280px) {
@@ -2094,7 +2094,8 @@ button,
         width: 6em; }
         #sidebar .toggle:before {
           font-size: 1.5rem;
-          margin-left: -0.4375em; }
+          margin-left: -0.4375em;
+          color: #000; }
       body.is-preload #sidebar {
         display: none; } }
   @media screen and (max-width: 736px) {
@@ -2123,7 +2124,6 @@ button,
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  border-bottom: solid 5px #000;
   padding: 6em 0 1em 0;
   position: relative; }
   #header > * {
@@ -2161,7 +2161,8 @@ button,
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
-  display: flex; }
+  display: flex;
+ }
   #banner h1 {
     margin-top: -0.125em; }
   #banner .content {
